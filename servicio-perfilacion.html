@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Lipopapada con Perfilación - Dra. Mildred Moreno</title>
+    <title>Lipopapada con Perfilación - Medicina Estética Avanzada, Mildred Moreno</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -76,7 +76,8 @@
         class="sticky top-0 z-50 w-full bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 transition-colors duration-300">
         <div class="max-w-[1440px] mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
-                <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-900 dark:text-white">
+                <button id="mobile-menu-btn"
+                    class="md:hidden w-10 p-2 text-slate-900 dark:text-white flex items-center justify-start">
                     <span class="material-symbols-outlined dropdown-icon">menu</span>
                 </button>
                 <div class="hidden md:flex flex-1 justify-start gap-5 lg:gap-8">
@@ -104,13 +105,14 @@
                         Agendar Cita
                     </a>
                 </div>
+                <div class="md:hidden w-10"></div>
             </div>
         </div>
     </nav>
 
     <!-- Mobile Menu Overlay -->
     <div id="mobile-menu"
-        class="fixed inset-0 z-40 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-xl transform translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col justify-center items-center gap-8 opacity-0 pointer-events-none">
+        class="fixed inset-0 z-[1000] bg-background-light dark:bg-background-dark transform translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col justify-center items-center gap-8 opacity-0 pointer-events-none">
         <a class="text-2xl font-medium tracking-wide hover:text-primary transition-colors uppercase mobile-link"
             href="filosofia.html">Filosofía</a>
         <a class="text-2xl font-medium tracking-wide hover:text-primary transition-colors uppercase mobile-link"
@@ -287,7 +289,8 @@
         <!-- Generic Footer layout -->
         <div class="max-w-[1440px] mx-auto px-6">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-                <div class="col-span-1 md:col-span-1">
+                <div
+                    class="col-span-1 md:col-span-1 flex flex-col items-center md:items-start text-center md:text-left">
                     <div class="mb-6">
                         <img src="assets/images/gallery/logo.webp" alt="Dra. Mildred Moreno Logo"
                             class="h-16 w-auto object-contain">
@@ -312,6 +315,30 @@
             entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
         }, observerOptions);
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Mobile Menu Logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        function toggleMenu() {
+            const isOpen = mobileMenu.classList.contains('translate-x-0');
+
+            if (isOpen) {
+                mobileMenu.classList.remove('translate-x-0', 'opacity-100', 'pointer-events-auto');
+                mobileMenu.classList.add('translate-x-full', 'opacity-0', 'pointer-events-none');
+                document.body.classList.remove('overflow-hidden');
+            } else {
+                mobileMenu.classList.add('translate-x-0', 'opacity-100', 'pointer-events-auto');
+                mobileMenu.classList.remove('translate-x-full', 'opacity-0', 'pointer-events-none');
+                document.body.classList.add('overflow-hidden');
+            }
+        }
+
+        if (mobileMenuBtn) mobileMenuBtn.addEventListener('click', toggleMenu);
+        if (closeMenuBtn) closeMenuBtn.addEventListener('click', toggleMenu);
+        mobileLinks.forEach(link => link.addEventListener('click', toggleMenu));
     </script>
 </body>
 

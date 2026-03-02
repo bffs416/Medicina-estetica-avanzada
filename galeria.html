@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resultados - Dra. Mildred Moreno</title>
+    <title>Resultados - Medicina Estética Avanzada, Mildred Moreno</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -69,18 +69,16 @@
             background: #94a3b8;
         }
 
-        /* Mobile Menu */
         .mobile-menu {
-            transform: translateX(100%);
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .mobile-menu.active {
-            transform: translateX(0);
-        }
-
-        /* Mobile Menu */
-        .mobile-menu {
+            position: fixed;
+            inset: 0;
+            background: #f5f9ff;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
             transform: translateX(100%);
             transition: transform 0.3s ease-in-out;
         }
@@ -315,12 +313,34 @@
 
         .badge-after {
             right: 15px;
-            background: var(--primary);
-            color: #fff;
-            /* Assuming white text for contrast on primary color */
-            background-color: #A7C7E7;
-            /* Hardcoding primary for safety or use var if defined */
+            background: #A7C7E7;
             color: #111a21;
+        }
+
+        /* Mobile Toggle Buttons */
+        @media (max-width: 768px) {
+            .wa-badge {
+                cursor: pointer;
+                pointer-events: auto;
+                transition: all 0.2s ease;
+                padding: 8px 16px;
+                border: 1px solid rgba(0, 0, 0, 0.05);
+            }
+
+            .wa-badge.active-toggle {
+                background: #111a21 !important;
+                color: #fff !important;
+                transform: scale(1.05);
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            }
+
+            .ba-container:hover .img-after {
+                opacity: 0;
+            }
+
+            .ba-container.show-after .img-after {
+                opacity: 1;
+            }
         }
     </style>
     <link
@@ -334,7 +354,7 @@
         class="sticky top-0 z-50 w-full bg-[#f5f9ff]/90 backdrop-blur-md border-b border-primary/10 transition-colors duration-300">
         <div class="max-w-[1440px] mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
-                <button id="mobile-menu-btn" class="md:hidden p-2 text-text-main">
+                <button id="mobile-menu-btn" class="md:hidden w-10 p-2 text-text-main flex items-center justify-start">
                     <span class="material-symbols-outlined">menu</span>
                 </button>
                 <div class="hidden md:flex flex-1 justify-start gap-5 lg:gap-8">
@@ -363,9 +383,9 @@
                         Agendar Cita
                     </a>
                 </div>
-                <div class="md:hidden">
+                <div class="md:hidden w-10 flex items-center justify-end">
                     <button class="text-text-main">
-                        <span class="material-symbols-outlined">calendar_month</span>
+                        <span class="material-symbols-outlined text-2xl">calendar_month</span>
                     </button>
                 </div>
             </div>
@@ -373,8 +393,7 @@
     </nav>
 
     <!-- Mobile Menu -->
-    <div class="mobile-menu fixed inset-0 bg-[#f5f9ff]/98 z-[200] flex flex-col justify-center items-center gap-8"
-        id="mobileMenu">
+    <div class="mobile-menu" id="mobileMenu">
         <button class="absolute top-8 right-8 text-text-main" id="closeMenuBtn">
             <span class="material-symbols-outlined text-4xl">close</span>
         </button>
@@ -392,7 +411,7 @@
     <section class="gallery-hero">
         <div class="slider-container" id="heroSlider">
             <div class="slide active-slide">
-                <img src="assets/images/gallery/Art1.png" alt="Dra Mildred Moreno Hero">
+                <img src="assets/images/gallery/Art1.png" alt="Dra Mildred Moreno Hero" loading="lazy" decoding="async">
                 <div class="hero-overlay">
                     <span class="text-primary text-xs font-bold tracking-[0.4em] uppercase mb-4">Resultados
                         Reales</span>
@@ -400,14 +419,14 @@
                 </div>
             </div>
             <div class="slide">
-                <img src="assets/images/gallery/Art2.jpeg" alt="Armonización Facial">
+                <img src="assets/images/gallery/Art2.jpeg" alt="Armonización Facial" loading="lazy" decoding="async">
                 <div class="hero-overlay">
                     <span class="text-primary text-xs font-bold tracking-[0.4em] uppercase mb-4">Maestría Facial</span>
                     <h2 class="hero-title"><span class="italic font-light">Naturalidad</span> & Armonía</h2>
                 </div>
             </div>
             <div class="slide">
-                <img src="assets/images/gallery/Art3.jpeg" alt="Vaser HD">
+                <img src="assets/images/gallery/Art3.jpeg" alt="Vaser HD" loading="lazy" decoding="async">
                 <div class="hero-overlay">
                     <span class="text-primary text-xs font-bold tracking-[0.4em] uppercase mb-4">Alta Definición</span>
                     <h2 class="hero-title"><span class="italic font-light">Precisión</span> Médica</h2>
@@ -444,12 +463,14 @@
             <div class="shadowbox-outer">
                 <div class="shadowbox-inner">
                     <div class="image-container">
-                        <div class="ba-container">
-                            <span class="wa-badge badge-before">Antes</span>
-                            <span class="wa-badge badge-after">Despues</span>
-                            <img src="assets/images/gallery/Antes_1.png" alt="Lipoescultura VASER Antes" class="ba-img">
+                        <div class="ba-container" onclick="handleMobileToggle(this)">
+                            <span class="wa-badge badge-before active-toggle"
+                                onclick="setMode(event, this, 'before')">Antes</span>
+                            <span class="wa-badge badge-after" onclick="setMode(event, this, 'after')">Despúes</span>
+                            <img src="assets/images/gallery/Antes_1.png" alt="Lipoescultura VASER Antes" class="ba-img"
+                                loading="lazy" decoding="async">
                             <img src="assets/images/gallery/Despues_1.png" alt="Lipoescultura VASER Despues"
-                                class="ba-img img-after">
+                                class="ba-img img-after" loading="lazy" decoding="async">
                         </div>
                     </div>
                 </div>
@@ -463,12 +484,14 @@
             <div class="shadowbox-outer">
                 <div class="shadowbox-inner">
                     <div class="image-container">
-                        <div class="ba-container">
-                            <span class="wa-badge badge-before">Antes</span>
-                            <span class="wa-badge badge-after">Despues</span>
-                            <img src="assets/images/gallery/Antes_2.png" alt="Lipopapada HD Antes" class="ba-img">
+                        <div class="ba-container" onclick="handleMobileToggle(this)">
+                            <span class="wa-badge badge-before active-toggle"
+                                onclick="setMode(event, this, 'before')">Antes</span>
+                            <span class="wa-badge badge-after" onclick="setMode(event, this, 'after')">Después</span>
+                            <img src="assets/images/gallery/Antes_2.png" alt="Lipopapada HD Antes" class="ba-img"
+                                loading="lazy" decoding="async">
                             <img src="assets/images/gallery/Despues_2.png" alt="Lipopapada HD Despues"
-                                class="ba-img img-after">
+                                class="ba-img img-after" loading="lazy" decoding="async">
                         </div>
                     </div>
                 </div>
@@ -482,12 +505,14 @@
             <div class="shadowbox-outer">
                 <div class="shadowbox-inner">
                     <div class="image-container">
-                        <div class="ba-container">
-                            <span class="wa-badge badge-before">Antes</span>
-                            <span class="wa-badge badge-after">Despues</span>
-                            <img src="assets/images/gallery/Antes_16.png" alt="Rinomodelación Antes" class="ba-img">
+                        <div class="ba-container" onclick="handleMobileToggle(this)">
+                            <span class="wa-badge badge-before active-toggle"
+                                onclick="setMode(event, this, 'before')">Antes</span>
+                            <span class="wa-badge badge-after" onclick="setMode(event, this, 'after')">Después</span>
+                            <img src="assets/images/gallery/Antes_16.png" alt="Rinomodelación Antes" class="ba-img"
+                                loading="lazy" decoding="async">
                             <img src="assets/images/gallery/Despues_16.png" alt="Rinomodelación Despues"
-                                class="ba-img img-after">
+                                class="ba-img img-after" loading="lazy" decoding="async">
                         </div>
                     </div>
                 </div>
@@ -501,12 +526,14 @@
             <div class="shadowbox-outer">
                 <div class="shadowbox-inner">
                     <div class="image-container">
-                        <div class="ba-container">
-                            <span class="wa-badge badge-before">Antes</span>
-                            <span class="wa-badge badge-after">Despues</span>
-                            <img src="assets/images/gallery/Antes_4.png" alt="Lipotransferencia Antes" class="ba-img">
+                        <div class="ba-container" onclick="handleMobileToggle(this)">
+                            <span class="wa-badge badge-before active-toggle"
+                                onclick="setMode(event, this, 'before')">Antes</span>
+                            <span class="wa-badge badge-after" onclick="setMode(event, this, 'after')">Después</span>
+                            <img src="assets/images/gallery/Antes_4.png" alt="Lipotransferencia Antes" class="ba-img"
+                                loading="lazy" decoding="async">
                             <img src="assets/images/gallery/Despues_4.png" alt="Lipotransferencia Despues"
-                                class="ba-img img-after">
+                                class="ba-img img-after" loading="lazy" decoding="async">
                         </div>
                     </div>
                 </div>
@@ -520,12 +547,14 @@
             <div class="shadowbox-outer">
                 <div class="shadowbox-inner">
                     <div class="image-container">
-                        <div class="ba-container">
-                            <span class="wa-badge badge-before">Antes</span>
-                            <span class="wa-badge badge-after">Despues</span>
-                            <img src="assets/images/gallery/Antes_5.png" alt="Armonización Antes" class="ba-img">
+                        <div class="ba-container" onclick="handleMobileToggle(this)">
+                            <span class="wa-badge badge-before active-toggle"
+                                onclick="setMode(event, this, 'before')">Antes</span>
+                            <span class="wa-badge badge-after" onclick="setMode(event, this, 'after')">Después</span>
+                            <img src="assets/images/gallery/Antes_5.png" alt="Armonización Antes" class="ba-img"
+                                loading="lazy" decoding="async">
                             <img src="assets/images/gallery/Despues_5.png" alt="Armonización Despues"
-                                class="ba-img img-after">
+                                class="ba-img img-after" loading="lazy" decoding="async">
                         </div>
                     </div>
                 </div>
@@ -539,12 +568,14 @@
             <div class="shadowbox-outer">
                 <div class="shadowbox-inner">
                     <div class="image-container">
-                        <div class="ba-container">
-                            <span class="wa-badge badge-before">Antes</span>
-                            <span class="wa-badge badge-after">Despues</span>
-                            <img src="assets/images/gallery/Antes_6.png" alt="Labios Rusos Antes" class="ba-img">
+                        <div class="ba-container" onclick="handleMobileToggle(this)">
+                            <span class="wa-badge badge-before active-toggle"
+                                onclick="setMode(event, this, 'before')">Antes</span>
+                            <span class="wa-badge badge-after" onclick="setMode(event, this, 'after')">Después</span>
+                            <img src="assets/images/gallery/Antes_6.png" alt="Labios Rusos Antes" class="ba-img"
+                                loading="lazy" decoding="async">
                             <img src="assets/images/gallery/Despues_6.png" alt="Labios Rusos Despues"
-                                class="ba-img img-after">
+                                class="ba-img img-after" loading="lazy" decoding="async">
                         </div>
                     </div>
                 </div>
@@ -558,12 +589,14 @@
             <div class="shadowbox-outer">
                 <div class="shadowbox-inner">
                     <div class="image-container">
-                        <div class="ba-container">
-                            <span class="wa-badge badge-before">Antes</span>
-                            <span class="wa-badge badge-after">Despues</span>
-                            <img src="assets/images/gallery/Antes_7.png" alt="Fox Eyes Antes" class="ba-img">
+                        <div class="ba-container" onclick="handleMobileToggle(this)">
+                            <span class="wa-badge badge-before active-toggle"
+                                onclick="setMode(event, this, 'before')">Antes</span>
+                            <span class="wa-badge badge-after" onclick="setMode(event, this, 'after')">Después</span>
+                            <img src="assets/images/gallery/Antes_7.png" alt="Fox Eyes Antes" class="ba-img"
+                                loading="lazy" decoding="async">
                             <img src="assets/images/gallery/Despues_7.png" alt="Fox Eyes Despues"
-                                class="ba-img img-after">
+                                class="ba-img img-after" loading="lazy" decoding="async">
                         </div>
                     </div>
                 </div>
@@ -577,12 +610,14 @@
             <div class="shadowbox-outer">
                 <div class="shadowbox-inner">
                     <div class="image-container">
-                        <div class="ba-container">
-                            <span class="wa-badge badge-before">Antes</span>
-                            <span class="wa-badge badge-after">Despues</span>
-                            <img src="assets/images/gallery/Antes_8.png" alt="Piel de Porcelana Antes" class="ba-img">
+                        <div class="ba-container" onclick="handleMobileToggle(this)">
+                            <span class="wa-badge badge-before active-toggle"
+                                onclick="setMode(event, this, 'before')">Antes</span>
+                            <span class="wa-badge badge-after" onclick="setMode(event, this, 'after')">Después</span>
+                            <img src="assets/images/gallery/Antes_8.png" alt="Piel de Porcelana Antes" class="ba-img"
+                                loading="lazy" decoding="async">
                             <img src="assets/images/gallery/Despues_8.png" alt="Piel de Porcelana Despues"
-                                class="ba-img img-after">
+                                class="ba-img img-after" loading="lazy" decoding="async">
                         </div>
                     </div>
                 </div>
@@ -596,13 +631,14 @@
             <div class="shadowbox-outer">
                 <div class="shadowbox-inner">
                     <div class="image-container">
-                        <div class="ba-container">
-                            <span class="wa-badge badge-before">Antes</span>
-                            <span class="wa-badge badge-after">Despues</span>
-                            <img src="assets/images/gallery/Antes_9.png" alt="Marcación Mandibular Antes"
-                                class="ba-img">
+                        <div class="ba-container" onclick="handleMobileToggle(this)">
+                            <span class="wa-badge badge-before active-toggle"
+                                onclick="setMode(event, this, 'before')">Antes</span>
+                            <span class="wa-badge badge-after" onclick="setMode(event, this, 'after')">Después</span>
+                            <img src="assets/images/gallery/Antes_9.png" alt="Marcación Mandibular Antes" class="ba-img"
+                                loading="lazy" decoding="async">
                             <img src="assets/images/gallery/Despues_9.png" alt="Marcación Mandibular Despues"
-                                class="ba-img img-after">
+                                class="ba-img img-after" loading="lazy" decoding="async">
                         </div>
                     </div>
                 </div>
@@ -616,12 +652,14 @@
             <div class="shadowbox-outer">
                 <div class="shadowbox-inner">
                     <div class="image-container">
-                        <div class="ba-container">
-                            <span class="wa-badge badge-before">Antes</span>
-                            <span class="wa-badge badge-after">Despues</span>
-                            <img src="assets/images/gallery/Antes_10.png" alt="Lipo de Brazos Antes" class="ba-img">
+                        <div class="ba-container" onclick="handleMobileToggle(this)">
+                            <span class="wa-badge badge-before active-toggle"
+                                onclick="setMode(event, this, 'before')">Antes</span>
+                            <span class="wa-badge badge-after" onclick="setMode(event, this, 'after')">Después</span>
+                            <img src="assets/images/gallery/Antes_10.png" alt="Lipo de Brazos Antes" class="ba-img"
+                                loading="lazy" decoding="async">
                             <img src="assets/images/gallery/Despues_10.png" alt="Lipo de Brazos Despues"
-                                class="ba-img img-after">
+                                class="ba-img img-after" loading="lazy" decoding="async">
                         </div>
                     </div>
                 </div>
@@ -635,12 +673,14 @@
             <div class="shadowbox-outer">
                 <div class="shadowbox-inner">
                     <div class="image-container">
-                        <div class="ba-container">
-                            <span class="wa-badge badge-before">Antes</span>
-                            <span class="wa-badge badge-after">Despues</span>
-                            <img src="assets/images/gallery/Antes_11.png" alt="Rejuvenecimiento Antes" class="ba-img">
+                        <div class="ba-container" onclick="handleMobileToggle(this)">
+                            <span class="wa-badge badge-before active-toggle"
+                                onclick="setMode(event, this, 'before')">Antes</span>
+                            <span class="wa-badge badge-after" onclick="setMode(event, this, 'after')">Después</span>
+                            <img src="assets/images/gallery/Antes_11.png" alt="Rejuvenecimiento Antes" class="ba-img"
+                                loading="lazy" decoding="async">
                             <img src="assets/images/gallery/Despues_11.png" alt="Rejuvenecimiento Despues"
-                                class="ba-img img-after">
+                                class="ba-img img-after" loading="lazy" decoding="async">
                         </div>
                     </div>
                 </div>
@@ -654,12 +694,14 @@
             <div class="shadowbox-outer">
                 <div class="shadowbox-inner">
                     <div class="image-container">
-                        <div class="ba-container">
-                            <span class="wa-badge badge-before">Antes</span>
-                            <span class="wa-badge badge-after">Despues</span>
-                            <img src="assets/images/gallery/Antes_12.png" alt="Full Face Antes" class="ba-img">
+                        <div class="ba-container" onclick="handleMobileToggle(this)">
+                            <span class="wa-badge badge-before active-toggle"
+                                onclick="setMode(event, this, 'before')">Antes</span>
+                            <span class="wa-badge badge-after" onclick="setMode(event, this, 'after')">Después</span>
+                            <img src="assets/images/gallery/Antes_12.png" alt="Full Face Antes" class="ba-img"
+                                loading="lazy" decoding="async">
                             <img src="assets/images/gallery/Despues_12.png" alt="Full Face Despues"
-                                class="ba-img img-after">
+                                class="ba-img img-after" loading="lazy" decoding="async">
                         </div>
                     </div>
                 </div>
@@ -673,12 +715,14 @@
             <div class="shadowbox-outer">
                 <div class="shadowbox-inner">
                     <div class="image-container">
-                        <div class="ba-container">
-                            <span class="wa-badge badge-before">Antes</span>
-                            <span class="wa-badge badge-after">Despues</span>
-                            <img src="assets/images/gallery/Antes_13.png" alt="Glow Up Antes" class="ba-img">
+                        <div class="ba-container" onclick="handleMobileToggle(this)">
+                            <span class="wa-badge badge-before active-toggle"
+                                onclick="setMode(event, this, 'before')">Antes</span>
+                            <span class="wa-badge badge-after" onclick="setMode(event, this, 'after')">Después</span>
+                            <img src="assets/images/gallery/Antes_13.png" alt="Glow Up Antes" class="ba-img"
+                                loading="lazy" decoding="async">
                             <img src="assets/images/gallery/Despues_13.png" alt="Glow Up Despues"
-                                class="ba-img img-after">
+                                class="ba-img img-after" loading="lazy" decoding="async">
                         </div>
                     </div>
                 </div>
@@ -692,12 +736,14 @@
             <div class="shadowbox-outer">
                 <div class="shadowbox-inner">
                     <div class="image-container">
-                        <div class="ba-container">
-                            <span class="wa-badge badge-before">Antes</span>
-                            <span class="wa-badge badge-after">Despues</span>
-                            <img src="assets/images/gallery/Antes_14.png" alt="Bioestimuladores Antes" class="ba-img">
+                        <div class="ba-container" onclick="handleMobileToggle(this)">
+                            <span class="wa-badge badge-before active-toggle"
+                                onclick="setMode(event, this, 'before')">Antes</span>
+                            <span class="wa-badge badge-after" onclick="setMode(event, this, 'after')">Después</span>
+                            <img src="assets/images/gallery/Antes_14.png" alt="Bioestimuladores Antes" class="ba-img"
+                                loading="lazy" decoding="async">
                             <img src="assets/images/gallery/Despues_14.png" alt="Bioestimuladores Despues"
-                                class="ba-img img-after">
+                                class="ba-img img-after" loading="lazy" decoding="async">
                         </div>
                     </div>
                 </div>
@@ -711,12 +757,14 @@
             <div class="shadowbox-outer">
                 <div class="shadowbox-inner">
                     <div class="image-container">
-                        <div class="ba-container">
-                            <span class="wa-badge badge-before">Antes</span>
-                            <span class="wa-badge badge-after">Despues</span>
-                            <img src="assets/images/gallery/Antes_15.png" alt="Toxina Botulínica Antes" class="ba-img">
+                        <div class="ba-container" onclick="handleMobileToggle(this)">
+                            <span class="wa-badge badge-before active-toggle"
+                                onclick="setMode(event, this, 'before')">Antes</span>
+                            <span class="wa-badge badge-after" onclick="setMode(event, this, 'after')">Después</span>
+                            <img src="assets/images/gallery/Antes_15.png" alt="Toxina Botulínica Antes" class="ba-img"
+                                loading="lazy" decoding="async">
                             <img src="assets/images/gallery/Despues_15.png" alt="Toxina Botulínica Despues"
-                                class="ba-img img-after">
+                                class="ba-img img-after" loading="lazy" decoding="async">
                         </div>
                     </div>
                 </div>
@@ -751,12 +799,13 @@
         id="contact">
         <div class="max-w-[1440px] mx-auto px-6">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-                <div class="col-span-1 md:col-span-1">
+                <div
+                    class="col-span-1 md:col-span-1 flex flex-col items-center md:items-start text-center md:text-left">
                     <div class="mb-6">
                         <img src="assets/images/gallery/logo.webp" alt="Dra. Mildred Moreno Logo"
                             class="h-16 w-auto object-contain">
                     </div>
-                    <p class="text-slate-500 text-sm leading-relaxed mb-6">
+                    <p class="text-slate-500 text-sm leading-relaxed mb-6 max-w-sm">
                         Elevando la medicina estética a través de la ciencia y el arte. Experience la diferencia de una
                         verdadera maestría.
                     </p>
@@ -832,12 +881,42 @@
         const links = menu.querySelectorAll('a');
 
         function toggle() {
-            menu.classList.toggle('translate-x-full');
+            menu.classList.toggle('active');
         }
 
         btn.addEventListener('click', toggle);
         close.addEventListener('click', toggle);
         links.forEach(l => l.addEventListener('click', toggle));
+
+        // Mobile Gallery Toggle Logic
+        function setMode(event, btn, mode) {
+            if (window.innerWidth > 768) return;
+            event.stopPropagation();
+            const container = btn.closest('.ba-container');
+            const badges = container.querySelectorAll('.wa-badge');
+
+            badges.forEach(b => b.classList.remove('active-toggle'));
+            btn.classList.add('active-toggle');
+
+            if (mode === 'after') {
+                container.classList.add('show-after');
+            } else {
+                container.classList.remove('show-after');
+            }
+        }
+
+        function handleMobileToggle(container) {
+            if (window.innerWidth > 768) return;
+            const isShowingAfter = container.classList.contains('show-after');
+            const beforeBadge = container.querySelector('.badge-before');
+            const afterBadge = container.querySelector('.badge-after');
+
+            if (isShowingAfter) {
+                setMode({ stopPropagation: () => { } }, beforeBadge, 'before');
+            } else {
+                setMode({ stopPropagation: () => { } }, afterBadge, 'after');
+            }
+        }
 
         // Hero Slider Logic
         let currentSlide = 0;

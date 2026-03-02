@@ -1,4 +1,4 @@
-# Elite Aesthetic Clinic - Dra. Mildred Moreno
+# Medicina Estética Avanzada - Dra. Mildred Moreno
 
 Este repositorio contiene el sitio web para la Dra. Mildred Moreno, especialista en Medicina Estética Avanzada en Bogotá, Colombia.
 

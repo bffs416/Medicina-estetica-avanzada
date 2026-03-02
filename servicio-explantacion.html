@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Explantación Mamaria - Dra. Mildred Moreno</title>
+    <title>Explantación Mamaria - Medicina Estética Avanzada, Mildred Moreno</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -76,7 +76,8 @@
         class="sticky top-0 z-50 w-full bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 transition-colors duration-300">
         <div class="max-w-[1440px] mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
-                <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-900 dark:text-white">
+                <button id="mobile-menu-btn"
+                    class="md:hidden w-10 p-2 text-slate-900 dark:text-white flex items-center justify-start">
                     <span class="material-symbols-outlined dropdown-icon">menu</span>
                 </button>
                 <div class="hidden md:flex flex-1 justify-start gap-5 lg:gap-8">
@@ -104,9 +105,9 @@
                         Agendar Cita
                     </a>
                 </div>
-                <div class="md:hidden">
-                    <button class="text-slate-900 dark:text-white">
-                        <span class="material-symbols-outlined">calendar_month</span>
+                <div class="md:hidden w-10 flex items-center justify-end">
+                    <button class="text-slate-900 dark:text-white p-2">
+                        <span class="material-symbols-outlined text-2xl">calendar_month</span>
                     </button>
                 </div>
             </div>
@@ -115,7 +116,7 @@
 
     <!-- Mobile Menu Overlay -->
     <div id="mobile-menu"
-        class="fixed inset-0 z-40 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-xl transform translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col justify-center items-center gap-8 opacity-0 pointer-events-none">
+        class="fixed inset-0 z-[1000] bg-background-light dark:bg-background-dark transform translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col justify-center items-center gap-8 opacity-0 pointer-events-none">
         <a class="text-2xl font-medium tracking-wide hover:text-primary transition-colors uppercase mobile-link"
             href="filosofia.html">Filosofía</a>
         <a class="text-2xl font-medium tracking-wide hover:text-primary transition-colors uppercase mobile-link"
@@ -158,7 +159,8 @@
             class="mb-16 rounded-2xl overflow-hidden shadow-xl reveal relative aspect-[3/4] sm:aspect-square md:aspect-[16/10] flex items-center justify-center bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800">
             <img src="assets/images/gallery/explantacion-ilustracion.png"
                 alt="Explantación Mamaria - Ilustración de Salud"
-                class="w-full h-full object-cover object-[center_60%] md:object-[center_65%] mix-blend-multiply dark:mix-blend-screen">
+                class="w-full h-full object-cover object-[center_60%] md:object-[center_65%] mix-blend-multiply dark:mix-blend-screen"
+                loading="lazy" decoding="async">
             <div
                 class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-background-light dark:from-background-dark via-background-light/40 dark:via-background-dark/40 to-transparent">
             </div>
@@ -356,24 +358,17 @@
         id="contact">
         <div class="max-w-[1440px] mx-auto px-6">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-                <div class="col-span-1 md:col-span-1">
+                <div
+                    class="col-span-1 md:col-span-1 flex flex-col items-center md:items-start text-center md:text-left">
                     <div class="mb-6">
                         <img src="assets/images/gallery/logo.webp" alt="Dra. Mildred Moreno Logo"
-                            class="h-16 w-auto object-contain">
+                            class="h-16 w-auto object-contain" loading="lazy" decoding="async">
                     </div>
-                    <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6">
+                    <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6 max-w-sm">
                         Elevando la medicina estética a través de la ciencia y el arte. Experimenta la diferencia de una
                         verdadera maestría.
                     </p>
                     <div class="flex gap-4">
-                        <a class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-colors text-slate-600 dark:text-slate-300"
-                            href="https://twitter.com/dramildredmoreno" target="_blank">
-                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                                <path
-                                    d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z">
-                                </path>
-                            </svg>
-                        </a>
                         <a class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-colors text-slate-600 dark:text-slate-300"
                             href="https://www.instagram.com/avanzadamedicina_estetica?igsh=c3N3eGJqbGp3ZWQ0&utm_source=qr"
                             target="_blank">

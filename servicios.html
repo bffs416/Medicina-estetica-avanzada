@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicios - Dra. Mildred Moreno</title>
+    <title>Servicios - Medicina Estética Avanzada, Mildred Moreno</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -148,6 +148,10 @@
             object-fit: contain;
         }
 
+        img {
+            content-visibility: auto;
+        }
+
         .btn-cta {
             background: var(--deep-blue);
             color: #fff;
@@ -191,6 +195,16 @@
             align-items: center;
             position: relative;
             overflow: hidden;
+        }
+
+        @media (max-width: 1024px) {
+            .service-card .content {
+                order: 2;
+            }
+
+            .service-card .visual-container {
+                order: 1;
+            }
         }
 
         .service-card.reverse {
@@ -386,15 +400,15 @@
             }
 
             .service-card.reverse .content {
-                order: 1;
-            }
-
-            .service-card.reverse .visual-container {
                 order: 2;
             }
 
+            .service-card.reverse .visual-container {
+                order: 1;
+            }
+
             .title {
-                font-size: 42px;
+                font-size: clamp(2rem, 5vw, 3.25rem);
             }
 
             .image-wrapper {
@@ -405,68 +419,116 @@
 
         @media (max-width: 768px) {
             .services-wrapper {
-                padding-top: 120px;
-                gap: 60px;
+                padding: 120px 16px 60px;
+                gap: 40px;
+            }
+
+            .service-card {
+                padding: 40px 24px;
+                border-radius: 36px;
+                gap: 40px;
+            }
+
+            .title {
+                font-size: 2.25rem;
+                line-height: 1.2;
+                margin-bottom: 20px;
+            }
+
+            .description {
+                font-size: 1rem;
+                line-height: 1.6;
+                margin-bottom: 30px;
+            }
+
+            .image-wrapper {
+                height: 320px;
+                border-radius: 60px 30px 60px 30px;
+            }
+
+            .service-card.reverse .image-wrapper {
+                border-radius: 60px 30px 60px 30px;
             }
 
             .floating-badge {
-                left: 50% !important;
-                right: auto !important;
-                transform: translateX(-50%);
-                bottom: -25px;
-                padding: 15px 25px;
+                left: auto !important;
+                right: 15px !important;
+                bottom: 25px;
+                padding: 10px 18px;
+                white-space: nowrap;
+                scale: 0.85;
+            }
+        }
+
+        /* Blob optimization for mobile */
+        @media (max-width: 768px) {
+            .blob-1 {
+                width: 300px;
+                height: 300px;
+                top: -100px;
+                right: -100px;
             }
 
-            .nav-links {
+            .blob-2 {
+                width: 250px;
+                height: 250px;
+                bottom: -50px;
+                left: -50px;
+            }
+
+            .blob-3 {
                 display: none;
             }
+        }
 
-            #mobile-menu-btn {
-                display: block;
-                background: none;
-                border: none;
-            }
+        .nav-links {
+            display: none;
+        }
 
-            .mobile-menu {
-                display: flex;
-                flex-direction: column;
-                position: fixed;
-                top: 0;
-                right: 0;
-                width: 100%;
-                height: 100vh;
-                background: rgba(245, 249, 255, 0.98);
-                backdrop-filter: blur(10px);
-                z-index: 200;
-                transform: translateX(100%);
-                transition: transform 0.3s ease-in-out;
-                justify-content: center;
-                align-items: center;
-                gap: 2rem;
-            }
+        #mobile-menu-btn {
+            display: block;
+            background: none;
+            border: none;
+        }
 
-            .mobile-menu.active {
-                transform: translateX(0);
-            }
+        .mobile-menu {
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100vh;
+            background: #f5f9ff;
+            z-index: 1000;
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+        }
 
-            .mobile-menu a {
-                text-decoration: none;
-                color: var(--deep-blue);
-                font-size: 1.2rem;
-                font-family: var(--font-display);
-                text-transform: uppercase;
-                letter-spacing: 0.1em;
-            }
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
 
-            .close-btn {
-                position: absolute;
-                top: 2rem;
-                right: 2rem;
-                background: none;
-                border: none;
-                cursor: pointer;
-                color: var(--deep-blue);
-            }
+        .mobile-menu a {
+            text-decoration: none;
+            color: var(--deep-blue);
+            font-size: 1.2rem;
+            font-family: var(--font-display);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--deep-blue);
         }
 
         .reveal {
@@ -499,14 +561,15 @@
 
 <body>
 
-    <nav>
-        <button id="mobile-menu-btn">
+    <nav class="flex justify-between items-center px-[5%] py-4">
+        <button id="mobile-menu-btn" class="md:hidden flex items-center justify-start w-10">
             <span class="material-symbols-outlined" style="font-size: 2rem;">menu</span>
         </button>
-        <a href="index.html">
+        <a href="index.html" class="flex-shrink-0">
             <img src="assets/images/gallery/logo.webp" alt="Dra. Moreno" class="logo-img" loading="lazy"
                 decoding="async">
         </a>
+        <div class="md:hidden w-10"></div>
         <ul class="nav-links">
             <li><a href="filosofia.html">FILOSOFÍA</a></li>
             <li><a href="servicios.html" class="active">SERVICIOS</a></li>
@@ -583,7 +646,8 @@
             <section class="visual-container">
                 <div class="image-wrapper">
                     <div class="overlay-effect"></div>
-                    <img src="assets/images/gallery/Vaser.webp" alt="Lipoescultura VASER" class="main-image">
+                    <img src="assets/images/gallery/Vaser.webp" alt="Lipoescultura VASER" class="main-image"
+                        loading="lazy" decoding="async">
                 </div>
 
                 <div class="floating-badge">
@@ -604,11 +668,11 @@
         <!-- Section: Lipotransferencia -->
         <article class="service-card reverse reveal">
             <section class="content">
-                <span class="category">Corporal - Definición</span>
-                <h2 class="title">Lipoescultura <br>Vaser</h2>
+                <span class="category">Corporal - Moldeo & Curvas</span>
+                <h2 class="title">Lipotransferencia: <br>Volumen Natural</h2>
                 <p class="description">
-                    Utilizamos tecnología de alta definición para esculpir y definir el contorno corporal, logrando
-                    resultados atléticos, seguros y naturales sin necesidad de implantes sintéticos.
+                    Utilizamos tu propia grasa procesada para restaurar volúmenes y esculpir curvas naturales. Un
+                    procedimiento orgánico que redefine tu silueta sin necesidad de implantes sintéticos.
                 </p>
 
                 <ul class="service-list">
@@ -647,7 +711,8 @@
             <section class="visual-container">
                 <div class="image-wrapper">
                     <div class="overlay-effect"></div>
-                    <img src="assets/images/gallery/transferencia 1.webp" alt="Lipoescultura Vaser" class="main-image">
+                    <img src="assets/images/gallery/transferencia 1.webp" alt="Lipoescultura Vaser" class="main-image"
+                        loading="lazy" decoding="async">
                 </div>
 
                 <div class="floating-badge">
@@ -703,7 +768,8 @@
             <section class="visual-container">
                 <div class="image-wrapper">
                     <div class="overlay-effect"></div>
-                    <img src="assets/images/gallery/transferencia 2.webp" alt="Lipopapada" class="main-image">
+                    <img src="assets/images/gallery/transferencia 2.webp" alt="Lipopapada" class="main-image"
+                        loading="lazy" decoding="async">
                 </div>
 
                 <div class="floating-badge">
@@ -769,7 +835,7 @@
                 <div class="image-wrapper">
                     <div class="overlay-effect"></div>
                     <img src="assets/images/gallery/Armonizacion Facila.webp" alt="Armonización Facial"
-                        class="main-image">
+                        class="main-image" loading="lazy" decoding="async">
                 </div>
 
                 <div class="floating-badge">
@@ -875,13 +941,14 @@
         id="contact">
         <div class="max-w-[1440px] mx-auto px-6">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-                <div class="col-span-1 md:col-span-1">
+                <div
+                    class="col-span-1 md:col-span-1 flex flex-col items-center md:items-start text-center md:text-left">
                     <div class="mb-6">
                         <img src="assets/images/gallery/logo.webp" alt="Dra. Mildred Moreno Logo"
                             class="h-16 w-auto object-contain">
                     </div>
-                    <p class="text-slate-500 text-sm leading-relaxed mb-6">
-                        Elevando la medicina estética a través de la ciencia y el arte. Experience la diferencia de una
+                    <p class="text-slate-500 text-sm leading-relaxed mb-6 max-w-sm">
+                        Elevando la medicina estética a través de la ciencia y el arte. Experimenta la diferencia de una
                         verdadera maestría.
                     </p>
                 </div>
