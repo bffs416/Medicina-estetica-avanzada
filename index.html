@@ -1,1079 +1,1063 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html class="light" lang="es">
 
 <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Medicina Estética Avanzada, Mildred Moreno</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!-- Preload critical assets -->
-    <link rel="preload" as="image" href="assets/images/gallery/hero.webp" />
-    <link rel="preload" as="image" href="assets/images/gallery/logo.webp" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap"
-        rel="stylesheet" media="print" onload="this.media='all'" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" media="print" onload="this.media='all'" />
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#A7C7E7", // Pastel blue accent
-                        "background-light": "#f6f7f8",
-                        "background-dark": "#111a21",
-                        "charcoal": "#1a1a1a",
-                        "dark-grey": "#2d2d2d",
-                    },
-                    fontFamily: {
-                        "display": ["Playfair Display", "serif"],
-                        "sans": ["Outfit", "sans-serif"],
-                        "serif": ["Newsreader", "serif"],
-                    },
-                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
-                },
-            },
-        }
-    </script>
-    <style>
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
+ <meta charset="utf-8" />
+ <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+ <title>Medicina Avanzada, Mildred Moreno</title>
+ <link rel="preconnect" href="https://fonts.googleapis.com" />
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+ <!-- Preload critical assets -->
+ <link rel="preload" as="image" href="assets/images/gallery/hero.webp" />
+ <link rel="preload" as="image" href="assets/images/gallery/logo.webp" />
+ <link
+ href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap"
+ rel="stylesheet" media="print" onload="this.media='all'" />
+ <link
+ href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+ rel="stylesheet" media="print" onload="this.media='all'" />
+ <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+ <script id="tailwind-config">
+ tailwind.config = {
+ darkMode: "class",
+ theme: {
+ extend: {
+ colors: {
+ "primary": "#A7C7E7", // Pastel blue accent
+ "background-light": "#f6f7f8",
+ "background-dark": "#111a21",
+ "charcoal": "#1a1a1a",
+ "dark-grey": "#2d2d2d",
+ },
+ fontFamily: {
+ "display": ["Playfair Display", "serif"],
+ "sans": ["Outfit", "sans-serif"],
+ "serif": ["Newsreader", "serif"],
+ },
+ borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+ },
+ },
+ }
+ </script>
+ <style>
+ ::-webkit-scrollbar {
+ width: 8px;
+ }
 
-        ::-webkit-scrollbar-track {
-            background: transparent;
-        }
+ ::-webkit-scrollbar-track {
+ background: transparent;
+ }
 
-        ::-webkit-scrollbar-thumb {
-            background: #cbd5e1;
-            border-radius: 4px;
-        }
+ ::-webkit-scrollbar-thumb {
+ background: #cbd5e1;
+ border-radius: 4px;
+ }
 
-        ::-webkit-scrollbar-thumb:hover {
-            background: #94a3b8;
-        }
+ ::-webkit-scrollbar-thumb:hover {
+ background: #94a3b8;
+ }
 
-        html {
-            scroll-behavior: smooth;
-        }
+ html {
+ scroll-behavior: smooth;
+ }
 
-        .editorial-card:hover .editorial-image {
-            transform: scale(1.03);
-        }
+ .editorial-card:hover .editorial-image {
+ transform: scale(1.03);
+ }
 
-        .comparison-container {
-            position: relative;
-            overflow: hidden;
-        }
+ .comparison-container {
+ position: relative;
+ overflow: hidden;
+ }
 
-        .comparison-overlay {
-            clip-path: inset(0 0 0 100%);
-            transition: clip-path 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-        }
+ .comparison-overlay {
+ clip-path: inset(0 0 0 100%);
+ transition: clip-path 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+ }
 
-        .comparison-container:hover .comparison-overlay {
-            clip-path: inset(0 0 0 0);
-        }
+ .comparison-container:hover .comparison-overlay {
+ clip-path: inset(0 0 0 0);
+ }
 
-        .comparison-handle {
-            left: 100%;
-            opacity: 0;
-            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-        }
+ .comparison-handle {
+ left: 100%;
+ opacity: 0;
+ transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+ }
 
-        .comparison-container:hover .comparison-handle {
-            left: 50%;
-            opacity: 0;
-        }
+ .comparison-container:hover .comparison-handle {
+ left: 50%;
+ opacity: 0;
+ }
 
-        .map-dark-mode {
-            filter: grayscale(100%) invert(92%) contrast(83%);
-        }
+ .map-dark-mode {
+ filter: grayscale(100%) invert(92%) contrast(83%);
+ }
 
-        .dark .map-dark-mode {
-            filter: grayscale(100%) invert(10%) contrast(83%);
-        }
+ .dark .map-dark-mode {
+ filter: grayscale(100%) invert(10%) contrast(83%);
+ }
 
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
-        }
+ .reveal {
+ opacity: 0;
+ transform: translateY(30px);
+ transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+ }
 
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
+ .reveal.active {
+ opacity: 1;
+ transform: translateY(0);
+ }
 
-        /* Promo Pop-up Styles */
-        #promo-modal {
-            transition: opacity 0.5s ease, visibility 0.5s ease;
-        }
+ /* Promo Pop-up Styles */
+ #promo-modal {
+ transition: opacity 0.5s ease, visibility 0.5s ease;
+ }
 
-        #promo-content {
-            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.6s ease;
-        }
+ #promo-content {
+ transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.6s ease;
+ }
 
-        .promo-glass {
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(25px);
-            -webkit-backdrop-filter: blur(25px);
-            border: 1px solid rgba(255, 255, 255, 0.4);
-        }
+ .promo-glass {
+ background: rgba(255, 255, 255, 0.85);
+ backdrop-filter: blur(25px);
+ -webkit-backdrop-filter: blur(25px);
+ border: 1px solid rgba(255, 255, 255, 0.4);
+ }
 
-        .dark .promo-glass {
-            background: rgba(17, 26, 33, 0.9);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
+ .dark .promo-glass {
+ background: rgba(17, 26, 33, 0.9);
+ border: 1px solid rgba(255, 255, 255, 0.1);
+ }
 
-        .promo-image-glow {
-            box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
-        }
+ .promo-image-glow {
+ box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
+ }
 
-        /* Performance optimizations */
-        header,
-        nav {
-            content-visibility: visible;
-        }
-    </style>
+ /* Performance optimizations */
+ header,
+ nav {
+ content-visibility: visible;
+ }
+ </style>
 </head>
 
 <body
-    class="bg-background-light dark:bg-background-dark font-sans text-slate-900 dark:text-slate-50 antialiased selection:bg-primary selection:text-white overflow-x-hidden">
-    <nav
-        class="sticky top-0 z-50 w-full bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 transition-colors duration-300">
-        <div class="max-w-[1440px] mx-auto px-6 py-4">
-            <div class="flex items-center justify-between">
-                <button id="mobile-menu-btn"
-                    class="md:hidden w-10 p-2 text-slate-900 dark:text-white flex items-center justify-start">
-                    <span class="material-symbols-outlined dropdown-icon">menu</span>
-                </button>
-                <div class="hidden md:flex flex-1 justify-start gap-5 lg:gap-8">
-                    <a class="text-sm font-medium tracking-wide hover:text-primary transition-colors uppercase"
-                        href="filosofia.html">Filosofía</a>
-                    <a class="text-sm font-medium tracking-wide hover:text-primary transition-colors uppercase"
-                        href="index.html#meet-me">Dra. Moreno</a>
-                    <a class="text-sm font-medium tracking-wide hover:text-primary transition-colors uppercase"
-                        href="servicios.html">Servicios</a>
-                </div>
-                <div class="flex-shrink-0 flex items-center justify-center mx-4 lg:mx-8">
-                    <a href="index.html">
-                        <img src="assets/images/gallery/logo.webp" alt="Dra. Mildred Moreno Logo"
-                            class="h-10 md:h-12 lg:h-14 w-auto object-contain" loading="lazy" decoding="async">
-                    </a>
-                </div>
-                <div class="hidden md:flex flex-1 justify-end items-center gap-5 lg:gap-8">
-                    <a class="text-sm font-medium tracking-wide hover:text-primary transition-colors uppercase"
-                        href="galeria.html">Resultados</a>
-                    <a class="text-sm font-medium tracking-wide hover:text-primary transition-colors uppercase"
-                        href="blog.html">Blog</a>
-                    <a class="text-sm font-medium tracking-wide hover:text-primary transition-colors uppercase"
-                        href="#contact">Contacto</a>
-                    <a href="https://wa.me/573014339938" target="_blank"
-                        class="bg-primary text-white px-5 py-2 rounded-full text-xs flex items-center justify-center font-bold uppercase tracking-wider hover:bg-primary/90 transition-all shadow-lg shadow-primary/20">
-                        Agendar Cita
-                    </a>
-                </div>
-                <div class="md:hidden w-10 flex items-center justify-end">
-                    <button class="text-slate-900 dark:text-white p-2">
-                        <span class="material-symbols-outlined text-2xl">calendar_month</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </nav>
+ class="bg-background-light dark:bg-background-dark font-sans text-slate-900 dark:text-slate-50 antialiased selection:bg-primary selection:text-white overflow-x-hidden">
+ <nav
+ class="sticky top-0 z-50 w-full bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 transition-colors duration-300">
+ <div class="max-w-[1440px] mx-auto px-6 py-4">
+ <div class="flex items-center justify-between">
+ <button id="mobile-menu-btn"
+ class="md:hidden w-10 p-2 text-slate-900 dark:text-white flex items-center justify-start">
+ <span class="material-symbols-outlined dropdown-icon">menu</span>
+ </button>
+ <div class="hidden md:flex flex-1 justify-start gap-5 lg:gap-8">
+ <a class="text-sm font-medium tracking-wide hover:text-primary transition-colors uppercase"
+ href="filosofia.html">Filosofía</a>
+ <a class="text-sm font-medium tracking-wide hover:text-primary transition-colors uppercase"
+ href="index.html#meet-me">Dra. Moreno</a>
+ <a class="text-sm font-medium tracking-wide hover:text-primary transition-colors uppercase"
+ href="servicios.html">Servicios</a>
+ </div>
+ <div class="flex-shrink-0 flex items-center justify-center mx-4 lg:mx-8">
+ <a href="index.html">
+ <img src="assets/images/gallery/logo.webp" alt="Dra. Mildred Moreno Logo"
+ class="h-10 md:h-12 lg:h-14 w-auto object-contain" loading="lazy" decoding="async">
+ </a>
+ </div>
+ <div class="hidden md:flex flex-1 justify-end items-center gap-5 lg:gap-8">
+ <a class="text-sm font-medium tracking-wide hover:text-primary transition-colors uppercase"
+ href="galeria.html">Resultados</a>
+ <a class="text-sm font-medium tracking-wide hover:text-primary transition-colors uppercase"
+ href="blog.html">Blog</a>
+ <a class="text-sm font-medium tracking-wide hover:text-primary transition-colors uppercase"
+ href="#contact">Contacto</a>
+ <a href="https://wa.me/573014339938" target="_blank"
+ class="bg-primary text-white px-5 py-2 rounded-full text-xs flex items-center justify-center font-bold uppercase tracking-wider hover:bg-primary/90 transition-all shadow-lg shadow-primary/20">
+ Agendar Cita
+ </a>
+ </div>
+ <div class="md:hidden w-10 flex items-center justify-end">
+ <button class="text-slate-900 dark:text-white p-2">
+ <span class="material-symbols-outlined text-2xl">calendar_month</span>
+ </button>
+ </div>
+ </div>
+ </div>
+ </nav>
 
-    <!-- Mobile Menu Overlay -->
-    <div id="mobile-menu"
-        class="fixed inset-0 z-[1000] bg-background-light dark:bg-background-dark transform translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col justify-center items-center gap-8 opacity-0 pointer-events-none">
-        <a class="text-2xl font-medium tracking-wide hover:text-primary transition-colors uppercase mobile-link"
-            href="filosofia.html">Filosofía</a>
-        <a class="text-2xl font-medium tracking-wide hover:text-primary transition-colors uppercase mobile-link"
-            href="index.html#meet-me">Dra. Moreno</a>
-        <a class="text-2xl font-medium tracking-wide hover:text-primary transition-colors uppercase mobile-link"
-            href="servicios.html">Servicios</a>
-        <a class="text-2xl font-medium tracking-wide hover:text-primary transition-colors uppercase mobile-link"
-            href="galeria.html">Resultados</a>
-        <a class="text-2xl font-medium tracking-wide hover:text-primary transition-colors uppercase mobile-link"
-            href="blog.html">Blog</a>
-        <a class="text-2xl font-medium tracking-wide hover:text-primary transition-colors uppercase mobile-link"
-            href="#contact">Contacto</a>
-        <a href="https://wa.me/573014339938" target="_blank"
-            class="bg-primary text-white px-8 py-3 rounded-full text-sm font-bold uppercase tracking-wider hover:bg-primary/90 transition-all shadow-lg shadow-primary/20 mt-4">
-            Agendar Cita
-        </a>
-        <button id="close-menu-btn" class="absolute top-6 right-6 p-2 text-slate-900 dark:text-white">
-            <span class="material-symbols-outlined text-3xl">close</span>
-        </button>
-    </div>
+ <!-- Mobile Menu Overlay -->
+ <div id="mobile-menu"
+ class="fixed inset-0 z-[1000] bg-background-light dark:bg-background-dark transform translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col justify-center items-center gap-8 opacity-0 pointer-events-none">
+ <a class="text-2xl font-medium tracking-wide hover:text-primary transition-colors uppercase mobile-link"
+ href="filosofia.html">Filosofía</a>
+ <a class="text-2xl font-medium tracking-wide hover:text-primary transition-colors uppercase mobile-link"
+ href="index.html#meet-me">Dra. Moreno</a>
+ <a class="text-2xl font-medium tracking-wide hover:text-primary transition-colors uppercase mobile-link"
+ href="servicios.html">Servicios</a>
+ <a class="text-2xl font-medium tracking-wide hover:text-primary transition-colors uppercase mobile-link"
+ href="galeria.html">Resultados</a>
+ <a class="text-2xl font-medium tracking-wide hover:text-primary transition-colors uppercase mobile-link"
+ href="blog.html">Blog</a>
+ <a class="text-2xl font-medium tracking-wide hover:text-primary transition-colors uppercase mobile-link"
+ href="#contact">Contacto</a>
+ <a href="https://wa.me/573014339938" target="_blank"
+ class="bg-primary text-white px-8 py-3 rounded-full text-sm font-bold uppercase tracking-wider hover:bg-primary/90 transition-all shadow-lg shadow-primary/20 mt-4">
+ Agendar Cita
+ </a>
+ <button id="close-menu-btn" class="absolute top-6 right-6 p-2 text-slate-900 dark:text-white">
+ <span class="material-symbols-outlined text-3xl">close</span>
+ </button>
+ </div>
 
-    <header class="relative w-full h-[85vh] min-h-[600px] overflow-hidden group">
-        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-[10s] ease-out group-hover:scale-105"
-            data-alt="Hero image - Facial treatment" style="background-image: url('assets/images/gallery/hero.webp');">
-        </div>
-        <div
-            class="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-background-light dark:to-background-dark">
-        </div>
-        <div class="absolute inset-0 bg-black/20"></div>
-        <div
-            class="relative h-full flex flex-col justify-end items-center pb-20 px-4 text-center max-w-[1440px] mx-auto">
-            <div class="flex flex-col gap-6 animate-fade-in-up">
-                <span class="text-white/90 text-sm md:text-base tracking-[0.2em] uppercase font-medium">Medicina
-                    Estética Avanzada</span>
-                <h1
-                    class="text-4xl md:text-7xl lg:text-8xl font-medium text-white tracking-tight leading-[1.1] drop-shadow-lg">
-                    <span class="italic font-light">Refinando la</span> <br />
-                    Obra Maestra
-                </h1>
-                <div class="flex flex-col md:flex-row gap-6 justify-center items-center mt-8">
-                    <a href="https://wa.me/573014339938?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20cita."
-                        target="_blank"
-                        class="bg-primary text-white px-10 py-4 rounded-full text-sm flex items-center justify-center font-bold tracking-[0.1em] uppercase hover:bg-white hover:text-slate-900 transition-all duration-300 shadow-xl shadow-primary/40 min-w-[200px]">
-                        Agendar Cita
-                    </a>
-                    <a href="servicios.html"
-                        class="backdrop-blur-md bg-white/10 border border-white/40 text-white px-10 py-4 rounded-full text-sm flex items-center justify-center font-bold tracking-[0.1em] uppercase hover:bg-white hover:text-slate-900 transition-all duration-300 min-w-[200px]">
-                        Nuestros Servicios
-                    </a>
-                </div>
-            </div>
-        </div>
-    </header>
+ <header class="relative w-full h-[85vh] min-h-[600px] overflow-hidden group">
+ <div class="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-[10s] ease-out group-hover:scale-105"
+ data-alt="Hero image - Facial treatment" style="background-image: url('assets/images/gallery/hero.webp');">
+ </div>
+ <div
+ class="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-background-light dark:to-background-dark">
+ </div>
+ <div class="absolute inset-0 bg-black/20"></div>
+ <div
+ class="relative h-full flex flex-col justify-end items-center pb-20 px-4 text-center max-w-[1440px] mx-auto">
+ <div class="flex flex-col gap-6 animate-fade-in-up">
+ <span class="text-white/90 text-sm md:text-base tracking-[0.2em] uppercase font-medium">Medicina
+ Avanzada</span>
+ <h1
+ class="text-4xl md:text-7xl lg:text-8xl font-medium text-white tracking-tight leading-[1.1] drop-shadow-lg">
+ <span class="italic font-light">Refinando la</span> <br />
+ Obra Maestra
+ </h1>
+ <div class="flex flex-col md:flex-row gap-6 justify-center items-center mt-8">
+ <a href="https://wa.me/573014339938?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20cita."
+ target="_blank"
+ class="bg-primary text-white px-10 py-4 rounded-full text-sm flex items-center justify-center font-bold tracking-[0.1em] uppercase hover:bg-white hover:text-slate-900 transition-all duration-300 shadow-xl shadow-primary/40 min-w-[200px]">
+ Agendar Cita
+ </a>
+ <a href="servicios.html"
+ class="backdrop-blur-md bg-white/10 border border-white/40 text-white px-10 py-4 rounded-full text-sm flex items-center justify-center font-bold tracking-[0.1em] uppercase hover:bg-white hover:text-slate-900 transition-all duration-300 min-w-[200px]">
+ Nuestros Servicios
+ </a>
+ </div>
+ </div>
+ </div>
+ </header>
 
-    <section class="py-24 px-6 md:px-12 max-w-[960px] mx-auto text-center" id="about">
-        <div class="flex flex-col items-center gap-6">
-            <span class="text-primary text-xs font-bold tracking-[0.2em] uppercase">El Arte del Cuerpo</span>
-            <h2 class="text-3xl md:text-5xl font-medium text-slate-900 dark:text-white leading-tight">
-                "No solo tratamos. <span class="italic text-slate-500 dark:text-slate-400">Esculpimos.</span>"
-            </h2>
-            <div class="w-12 h-0.5 bg-primary/40 my-4"></div>
-            <p class="text-lg md:text-xl text-slate-600 dark:text-slate-300 font-light leading-relaxed max-w-2xl">
-                La Dra. Moreno combina la precisión médica con un ojo artístico para crear resultados naturales y
-                sofisticados que realzan tu belleza única en lugar de ocultarla. En un mundo de excesos, elegimos el
-                equilibrio, la simetría y la elegancia.
-            </p>
-            <div class="mt-8">
-                <img alt="Logo Dra. Mildred Moreno" class="h-16 w-auto object-contain"
-                    src="assets/images/gallery/logo.webp" loading="lazy" decoding="async" />
-            </div>
-        </div>
-    </section>
+ <section class="py-24 px-6 md:px-12 max-w-[960px] mx-auto text-center" id="about">
+ <div class="flex flex-col items-center gap-6">
+ <span class="text-primary text-xs font-bold tracking-[0.2em] uppercase">El Arte del Cuerpo</span>
+ <h2 class="text-3xl md:text-5xl font-medium text-slate-900 dark:text-white leading-tight">
+ "No solo tratamos. <span class="italic text-slate-500 dark:text-slate-400">Esculpimos.</span>"
+ </h2>
+ <div class="w-12 h-0.5 bg-primary/40 my-4"></div>
+ <p class="text-lg md:text-xl text-slate-600 dark:text-slate-300 font-light leading-relaxed max-w-2xl">
+ La Dra. Moreno combina la precisión médica con un ojo artístico para crear resultados naturales y
+ sofisticados que realzan tu belleza única en lugar de ocultarla. En un mundo de excesos, elegimos el
+ equilibrio, la simetría y la elegancia.
+ </p>
+ <div class="mt-8">
+ <img alt="Logo Dra. Mildred Moreno" class="h-16 w-auto object-contain"
+ src="assets/images/gallery/logo.webp" loading="lazy" decoding="async" />
+ </div>
+ </div>
+ </section>
 
-    <section class="py-24 bg-white dark:bg-slate-900/50 relative overflow-hidden" id="meet-me">
-        <div class="max-w-[1440px] mx-auto px-6">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                <div class="lg:col-span-5 relative order-2 lg:order-1">
-                    <div class="relative aspect-[4/5] overflow-hidden rounded-lg shadow-2xl">
-                        <div class="w-full h-full bg-cover bg-center hover:scale-105 transition-transform duration-1000"
-                            style="background-image: url('assets/images/gallery/dra-moreno.webp');">
-                        </div>
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-60"></div>
-                    </div>
-                    <div
-                        class="absolute -top-4 -left-4 w-full h-full border border-primary/30 rounded-lg -z-10 hidden lg:block">
-                    </div>
-                </div>
-                <div class="lg:col-span-7 flex flex-col gap-6 order-1 lg:order-2 lg:pl-12">
-                    <div>
-                        <span
-                            class="text-primary text-xs font-bold tracking-[0.2em] uppercase mb-2 block">Conóceme</span>
-                        <h2 class="text-4xl md:text-6xl font-medium text-slate-900 dark:text-white leading-none mb-6">
-                            Dra. Mildred <br /><span class="italic text-slate-500 dark:text-slate-400">Moreno</span>
-                        </h2>
-                    </div>
-                    <div class="space-y-6 text-lg text-slate-600 dark:text-slate-300 font-light leading-relaxed">
-                        <p class="text-xl italic font-serif text-primary/80">
-                            "La medicina es mi ciencia; la belleza es mi arte."
-                        </p>
-                        <p>
-                            Con más de 15 años de experiencia en medicina estética avanzada, mi filosofía se basa en la
-                            creencia de que una verdadera mejora debe susurrar, no gritar. Me especializo en la
-                            <strong>Lipoescultura VASER HD</strong>, considerada el "estándar de oro" para la definición
-                            corporal, y en la armonización facial no quirúrgica.
-                        </p>
-                        <p>
-                            Mi enfoque va más allá de los protocolos estándar. Como especialista en tecnología VASER,
-                            veo cada cuerpo como una escultura única, utilizando ondas ultrasónicas para revelar la
-                            definición muscular natural y lograr una retracción cutánea superior, siempre priorizando tu
-                            seguridad y una recuperación acelerada.
-                        </p>
-                    </div>
-                    <div class="flex flex-wrap gap-8 pt-6 border-t border-slate-200 dark:border-slate-800 mt-2">
-                        <div>
-                            <span class="block text-4xl font-display text-primary">15+</span>
-                            <span class="text-xs uppercase tracking-widest text-slate-500 mt-1 block">Años de
-                                Experiencia</span>
-                        </div>
-                        <div>
-                            <span class="block text-4xl font-display text-primary">5k+</span>
-                            <span
-                                class="text-xs uppercase tracking-widest text-slate-500 mt-1 block">Procedimientos</span>
-                        </div>
-                        <div>
-                            <span class="block text-4xl font-display text-primary">20+</span>
-                            <span
-                                class="text-xs uppercase tracking-widest text-slate-500 mt-1 block">Conferencias</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+ <section class="py-24 bg-white dark:bg-slate-900/50 relative overflow-hidden" id="meet-me">
+ <div class="max-w-[1440px] mx-auto px-6">
+ <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+ <div class="lg:col-span-5 relative order-2 lg:order-1">
+ <div class="relative aspect-[4/5] overflow-hidden rounded-lg shadow-2xl">
+ <div class="w-full h-full bg-cover bg-center hover:scale-105 transition-transform duration-1000"
+ style="background-image: url('assets/images/gallery/dra-moreno.webp');">
+ </div>
+ <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-60"></div>
+ </div>
+ <div
+ class="absolute -top-4 -left-4 w-full h-full border border-primary/30 rounded-lg -z-10 hidden lg:block">
+ </div>
+ </div>
+ <div class="lg:col-span-7 flex flex-col gap-6 order-1 lg:order-2 lg:pl-12">
+ <div>
+ <span
+ class="text-primary text-xs font-bold tracking-[0.2em] uppercase mb-2 block">Conóceme</span>
+ <h2 class="text-4xl md:text-6xl font-medium text-slate-900 dark:text-white leading-none mb-6">
+ Dra. Mildred <br /><span class="italic text-slate-500 dark:text-slate-400">Moreno</span>
+ </h2>
+ </div>
+ <div class="space-y-6 text-lg text-slate-600 dark:text-slate-300 font-light leading-relaxed">
+ <p class="text-xl italic font-serif text-primary/80">
+ "La medicina es mi ciencia; la belleza es mi arte."
+ </p>
+ <p>
+ Con más de 15 años de experiencia en medicina avanzada, mi filosofía se basa en la
+ creencia de que una verdadera mejora debe susurrar, no gritar. Me especializo en la
+ <strong>Lipoescultura VASER HD</strong>, considerada el "estándar de oro" para la definición
+ corporal, y en la armonización facial no quirúrgica.
+ </p>
+ <p>
+ Mi enfoque va más allá de los protocolos estándar. Como especialista en tecnología VASER,
+ veo cada cuerpo como una escultura única, utilizando ondas ultrasónicas para revelar la
+ definición muscular natural y lograr una retracción cutánea superior, siempre priorizando tu
+ seguridad y una recuperación acelerada.
+ </p>
+ </div>
+ <div class="flex flex-wrap gap-8 pt-6 border-t border-slate-200 dark:border-slate-800 mt-2">
+ <div>
+ <span class="block text-4xl font-display text-primary">15+</span>
+ <span class="text-xs uppercase tracking-widest text-slate-500 mt-1 block">Años de
+ Experiencia</span>
+ </div>
+ <div>
+ <span class="block text-4xl font-display text-primary">5k+</span>
+ <span
+ class="text-xs uppercase tracking-widest text-slate-500 mt-1 block">Procedimientos</span>
+ </div>
+ <div>
+ <span class="block text-4xl font-display text-primary">20+</span>
+ <span
+ class="text-xs uppercase tracking-widest text-slate-500 mt-1 block">Conferencias</span>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
 
-    <section class="py-12 md:py-24 bg-background-light dark:bg-background-dark" id="services">
-        <div class="max-w-[1440px] mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
-                <div>
-                    <h3 class="text-4xl font-medium text-slate-900 dark:text-white mb-2">Tratamientos Exclusivos</h3>
-                    <p class="text-slate-500 dark:text-slate-400">Protocolos personalizados diseñados para la élite.</p>
-                </div>
-                <a class="relative px-8 py-4 font-bold text-white transition-all duration-300 rounded-full bg-gradient-to-br from-primary to-blue-400 shadow-[0_10px_30px_-10px_rgba(167,199,231,0.8)] hover:shadow-[0_20px_40px_-5px_rgba(167,199,231,1)] hover:scale-110 hover:-translate-y-1 group overflow-hidden"
-                    href="servicios.html">
-                    <span
-                        class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></span>
-                    <span class="relative flex items-center gap-3 text-sm tracking-[0.2em] uppercase">
-                        Ver Todos los Servicios
-                        <span
-                            class="material-symbols-outlined text-lg transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
-                    </span>
-                </a>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- 01: Vaser -->
-                <div class="group cursor-pointer editorial-card" onclick="window.location='servicio-vaser.html'">
-                    <div class="relative aspect-[3/4] overflow-hidden rounded-lg mb-6">
-                        <div class="editorial-image w-full h-full bg-cover bg-center transition-transform duration-700 ease-out"
-                            data-alt="Service - Body"
-                            style="background-image: url('assets/images/gallery/Vaser_1.webp');">
-                        </div>
-                        <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
-                    </div>
-                    <div class="flex flex-col gap-2">
-                        <span class="text-primary text-xs font-bold uppercase tracking-widest">01</span>
-                        <h4
-                            class="text-2xl font-medium text-slate-900 dark:text-white group-hover:text-primary transition-colors">
-                            Lipoescultura VASER HD</h4>
-                        <p>Tecnología VASER avanzada para máxima definición, logrando una redefinición corporal completa
-                            y un contorno perfecto. </p>
-                    </div>
-                </div>
+ <section class="py-12 md:py-24 bg-background-light dark:bg-background-dark" id="services">
+ <div class="max-w-[1440px] mx-auto px-6">
+ <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+ <div>
+ <h3 class="text-4xl font-medium text-slate-900 dark:text-white mb-2">Tratamientos Exclusivos</h3>
+ <p class="text-slate-500 dark:text-slate-400">Protocolos personalizados diseñados para la élite.</p>
+ </div>
+ <a class="relative px-8 py-4 font-bold text-white transition-all duration-300 rounded-full bg-gradient-to-br from-primary to-blue-400 shadow-[0_10px_30px_-10px_rgba(167,199,231,0.8)] hover:shadow-[0_20px_40px_-5px_rgba(167,199,231,1)] hover:scale-110 hover:-translate-y-1 group overflow-hidden"
+ href="servicios.html">
+ <span
+ class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></span>
+ <span class="relative flex items-center gap-3 text-sm tracking-[0.2em] uppercase">
+ Ver Todos los Servicios
+ <span
+ class="material-symbols-outlined text-lg transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+ </span>
+ </a>
+ </div>
+ <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+ <!-- 01: Vaser -->
+ <div class="group cursor-pointer editorial-card" onclick="window.location='servicio-vaser.html'">
+ <div class="relative aspect-[3/4] overflow-hidden rounded-lg mb-6">
+ <div class="editorial-image w-full h-full bg-cover bg-center transition-transform duration-700 ease-out"
+ data-alt="Service - Body"
+ style="background-image: url('assets/images/gallery/Vaser_1.webp');">
+ </div>
+ <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
+ </div>
+ <div class="flex flex-col gap-2">
+ <span class="text-primary text-xs font-bold uppercase tracking-widest">01</span>
+ <h4
+ class="text-2xl font-medium text-slate-900 dark:text-white group-hover:text-primary transition-colors">
+ Lipoescultura VASER HD</h4>
+ <p>Tecnología VASER avanzada para máxima definición, logrando una redefinición corporal completa
+ y un contorno perfecto. </p>
+ </div>
+ </div>
 
-                <!-- 02: Perfilación -->
-                <div class="group cursor-pointer editorial-card" onclick="window.location='servicio-perfilacion.html'">
-                    <div class="relative aspect-[3/4] overflow-hidden rounded-lg mb-6">
-                        <div class="editorial-image w-full h-full bg-cover bg-center transition-transform duration-700 ease-out"
-                            data-alt="Service - Anti-Aging"
-                            style="background-image: url('assets/images/gallery/Lipopapada.webp');">
-                        </div>
-                        <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
-                    </div>
-                    <div class="flex flex-col gap-2">
-                        <span class="text-primary text-xs font-bold uppercase tracking-widest">02</span>
-                        <h4
-                            class="text-2xl font-medium text-slate-900 dark:text-white group-hover:text-primary transition-colors">
-                            Perfilación y Contorno</h4>
-                        <p
-                            class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed border-l-2 border-slate-200 dark:border-slate-700 pl-3">
-                            Lipopapada con perfilación mandibular para definir tu rasgos, logrando un cuello estilizado
-                            y un perfil elegante y armónico.
-                        </p>
-                    </div>
-                </div>
+ <!-- 02: Perfilación -->
+ <div class="group cursor-pointer editorial-card" onclick="window.location='servicio-perfilacion.html'">
+ <div class="relative aspect-[3/4] overflow-hidden rounded-lg mb-6">
+ <div class="editorial-image w-full h-full bg-cover bg-center transition-transform duration-700 ease-out"
+ data-alt="Service - Anti-Aging"
+ style="background-image: url('assets/images/gallery/Lipopapada.webp');">
+ </div>
+ <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
+ </div>
+ <div class="flex flex-col gap-2">
+ <span class="text-primary text-xs font-bold uppercase tracking-widest">02</span>
+ <h4
+ class="text-2xl font-medium text-slate-900 dark:text-white group-hover:text-primary transition-colors">
+ Perfilación y Contorno</h4>
+ <p
+ class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed border-l-2 border-slate-200 dark:border-slate-700 pl-3">
+ Lipopapada con perfilación mandibular para definir tu rasgos, logrando un cuello estilizado
+ y un perfil elegante y armónico.
+ </p>
+ </div>
+ </div>
 
-                <!-- 03: Explantación -->
-                <div class="group cursor-pointer editorial-card" onclick="window.location='servicio-explantacion.html'">
-                    <div class="relative aspect-[3/4] overflow-hidden rounded-lg mb-6">
-                        <div class="editorial-image w-full h-full bg-cover bg-center transition-transform duration-700 ease-out"
-                            data-alt="Service - Explantation"
-                            style="background-image: url('assets/images/gallery/explantacion-ilustracion.png');">
-                        </div>
-                        <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
-                    </div>
-                    <div class="flex flex-col gap-2">
-                        <span class="text-primary text-xs font-bold uppercase tracking-widest">03</span>
-                        <h4
-                            class="text-2xl font-medium text-slate-900 dark:text-white group-hover:text-primary transition-colors">
-                            Explantación Mamaria</h4>
-                        <p
-                            class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed border-l-2 border-slate-200 dark:border-slate-700 pl-3">
-                            Acompañamiento médico experto para una transición segura hacia tu figura natural. Recupera
-                            tu bienestar y belleza.
-                        </p>
-                    </div>
-                </div>
+ <!-- 03: Explantación -->
+ <div class="group cursor-pointer editorial-card" onclick="window.location='servicio-explantacion.html'">
+ <div class="relative aspect-[3/4] overflow-hidden rounded-lg mb-6">
+ <div class="editorial-image w-full h-full bg-cover bg-center transition-transform duration-700 ease-out"
+ data-alt="Service - Explantation"
+ style="background-image: url('assets/images/gallery/explantacion-ilustracion.png');">
+ </div>
+ <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
+ </div>
+ <div class="flex flex-col gap-2">
+ <span class="text-primary text-xs font-bold uppercase tracking-widest">03</span>
+ <h4
+ class="text-2xl font-medium text-slate-900 dark:text-white group-hover:text-primary transition-colors">
+ Explantación Mamaria</h4>
+ <p
+ class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed border-l-2 border-slate-200 dark:border-slate-700 pl-3">
+ Acompañamiento médico experto para una transición segura hacia tu figura natural. Recupera
+ tu bienestar y belleza.
+ </p>
+ </div>
+ </div>
 
-                <!-- 04: Armonización Facial -->
-                <div class="group cursor-pointer editorial-card" onclick="window.location='servicio-armonizacion.html'">
-                    <div class="relative aspect-[3/4] overflow-hidden rounded-lg mb-6">
-                        <div class="editorial-image w-full h-full bg-cover bg-center transition-transform duration-700 ease-out"
-                            data-alt="Service - Facial"
-                            style="background-image: url('assets/images/gallery/Armonizacion Facial.webp');">
-                        </div>
-                        <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
-                    </div>
-                    <div class="flex flex-col gap-2">
-                        <span class="text-primary text-xs font-bold uppercase tracking-widest">04</span>
-                        <h4
-                            class="text-2xl font-medium text-slate-900 dark:text-white group-hover:text-primary transition-colors">
-                            Armonización Facial</h4>
-                        <p
-                            class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed border-l-2 border-slate-200 dark:border-slate-700 pl-3">
-                            Toxina Botulínica, Hilos Tensores, Ácido Hialurónico y Bioestimuladores para un
-                            rejuvenecimiento integral.
-                        </p>
-                    </div>
-                </div>
+ <!-- 04: Armonización Facial -->
+ <div class="group cursor-pointer editorial-card" onclick="window.location='servicio-armonizacion.html'">
+ <div class="relative aspect-[3/4] overflow-hidden rounded-lg mb-6">
+ <div class="editorial-image w-full h-full bg-cover bg-center transition-transform duration-700 ease-out"
+ data-alt="Service - Facial"
+ style="background-image: url('assets/images/gallery/Armonizacion Facial.webp');">
+ </div>
+ <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
+ </div>
+ <div class="flex flex-col gap-2">
+ <span class="text-primary text-xs font-bold uppercase tracking-widest">04</span>
+ <h4
+ class="text-2xl font-medium text-slate-900 dark:text-white group-hover:text-primary transition-colors">
+ Armonización Facial</h4>
+ <p
+ class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed border-l-2 border-slate-200 dark:border-slate-700 pl-3">
+ Toxina Botulínica, Hilos Tensores, Ácido Hialurónico y Bioestimuladores para un
+ rejuvenecimiento integral.
+ </p>
+ </div>
+ </div>
 
-                <!-- 05: Lipectomía -->
-                <div class="group cursor-pointer editorial-card" onclick="window.location='servicio-lipectomia.html'">
-                    <div class="relative aspect-[3/4] overflow-hidden rounded-lg mb-6">
-                        <div class="editorial-image w-full h-full bg-cover bg-center transition-transform duration-700 ease-out"
-                            data-alt="Service - Lipectomy"
-                            style="background-image: url('assets/images/gallery/Lipectomia.png');">
-                        </div>
-                        <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
-                    </div>
-                    <div class="flex flex-col gap-2">
-                        <span class="text-primary text-xs font-bold uppercase tracking-widest">05</span>
-                        <h4
-                            class="text-2xl font-medium text-slate-900 dark:text-white group-hover:text-primary transition-colors">
-                            Lipectomía Abdominal</h4>
-                        <p
-                            class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed border-l-2 border-slate-200 dark:border-slate-700 pl-3">
-                            Remodelación total del abdomen, eliminando piel excedente y restaurando la firmeza muscular
-                            para
-                            una silueta definida.
-                        </p>
-                    </div>
-                </div>
+ <!-- 05: Lipectomía -->
+ <div class="group cursor-pointer editorial-card" onclick="window.location='servicio-lipectomia.html'">
+ <div class="relative aspect-[3/4] overflow-hidden rounded-lg mb-6">
+ <div class="editorial-image w-full h-full bg-cover bg-center transition-transform duration-700 ease-out"
+ data-alt="Service - Lipectomy"
+ style="background-image: url('assets/images/gallery/Lipectomia.png');">
+ </div>
+ <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
+ </div>
+ <div class="flex flex-col gap-2">
+ <span class="text-primary text-xs font-bold uppercase tracking-widest">05</span>
+ <h4
+ class="text-2xl font-medium text-slate-900 dark:text-white group-hover:text-primary transition-colors">
+ Lipectomía Abdominal</h4>
+ <p
+ class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed border-l-2 border-slate-200 dark:border-slate-700 pl-3">
+ Remodelación total del abdomen, eliminando piel excedente y restaurando la firmeza muscular
+ para
+ una silueta definida.
+ </p>
+ </div>
+ </div>
 
-                <!-- 06: Mamoplastia -->
-                <div class="group cursor-pointer editorial-card" onclick="window.location='servicio-mamoplastia.html'">
-                    <div class="relative aspect-[3/4] overflow-hidden rounded-lg mb-6">
-                        <div class="editorial-image w-full h-full bg-cover bg-center transition-transform duration-700 ease-out"
-                            data-alt="Service - Breast Augmentation"
-                            style="background-image: url('assets/images/gallery/Mamoplastia.png');">
-                        </div>
-                        <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
-                    </div>
-                    <div class="flex flex-col gap-2">
-                        <span class="text-primary text-xs font-bold uppercase tracking-widest">06</span>
-                        <h4
-                            class="text-2xl font-medium text-slate-900 dark:text-white group-hover:text-primary transition-colors">
-                            Mamoplastia de Aumento</h4>
-                        <p
-                            class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed border-l-2 border-slate-200 dark:border-slate-700 pl-3">
-                            Realce y armonía mamaria con implantes de última tecnología, logrando resultados
-                            proporcionales
-                            y naturales.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+ <!-- 06: Mamoplastia -->
+ <div class="group cursor-pointer editorial-card" onclick="window.location='servicio-mamoplastia.html'">
+ <div class="relative aspect-[3/4] overflow-hidden rounded-lg mb-6">
+ <div class="editorial-image w-full h-full bg-cover bg-center transition-transform duration-700 ease-out"
+ data-alt="Service - Breast Augmentation"
+ style="background-image: url('assets/images/gallery/Mamoplastia.png');">
+ </div>
+ <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
+ </div>
+ <div class="flex flex-col gap-2">
+ <span class="text-primary text-xs font-bold uppercase tracking-widest">06</span>
+ <h4
+ class="text-2xl font-medium text-slate-900 dark:text-white group-hover:text-primary transition-colors">
+ Mamoplastia de Aumento</h4>
+ <p
+ class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed border-l-2 border-slate-200 dark:border-slate-700 pl-3">
+ Realce y armonía mamaria con implantes de última tecnología, logrando resultados
+ proporcionales
+ y naturales.
+ </p>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
 
-    <section class="py-24 bg-white dark:bg-slate-900 relative">
-        <div class="max-w-[1440px] mx-auto px-6">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <div class="flex flex-col gap-8">
-                    <div>
-                        <span class="text-primary text-xs font-bold tracking-[0.2em] uppercase mb-4 block">Especialidad
-                            Signature</span>
-                        <h2 class="text-4xl md:text-5xl font-medium text-slate-900 dark:text-white leading-tight">
-                            Lipoescultura VASER:<br /><span class="italic text-slate-500 dark:text-slate-400">Presisión
-                                Artística</span>
-                        </h2>
-                    </div>
-                    <p class="text-lg text-slate-600 dark:text-slate-300 font-light leading-relaxed">
-                        El sistema VASER es una tecnología de ultrasonido de tercera generación que "emulsiona" la grasa
-                        de forma selectiva, preservando vasos sanguíneos y nervios. Esto permite a la Dra. Moreno
-                        esculpir con una precisión milimétrica imposible de lograr con métodos tradicionales.
-                    </p>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div
-                            class="p-6 bg-background-light dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700">
-                            <span class="material-symbols-outlined text-primary mb-3">verified</span>
-                            <h5 class="font-bold text-sm uppercase tracking-wide mb-2">Piel más Firme</h5>
-                            <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">Retracción cutánea
-                                hasta un 53% superior gracias al estímulo de colágeno por ultrasonido.</p>
-                        </div>
-                        <div
-                            class="p-6 bg-background-light dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700">
-                            <span class="material-symbols-outlined text-primary mb-3">bolt</span>
-                            <h5 class="font-bold text-sm uppercase tracking-wide mb-2">Recuperación Rápida</h5>
-                            <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">Menor trauma tisular,
-                                permitiendo retomar actividades ligeras en tan solo 3 a 7 días.</p>
-                        </div>
-                        <div
-                            class="p-6 bg-background-light dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700">
-                            <span class="material-symbols-outlined text-primary mb-3">center_focus_strong</span>
-                            <h5 class="font-bold text-sm uppercase tracking-wide mb-2">Alta Definición HD</h5>
-                            <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">Especialidad en
-                                marcación abdominal y cintura definida para un look natural y atlético.</p>
-                        </div>
-                        <div
-                            class="p-6 bg-background-light dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700">
-                            <span class="material-symbols-outlined text-primary mb-3">add_circle</span>
-                            <h5 class="font-bold text-sm uppercase tracking-wide mb-2">Definición Viable</h5>
-                            <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">Grasa con 85% de
-                                viabilidad ideal para reubicación estratégica o simplemente lograr una definición
-                                atlética duradera.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="relative">
-                    <div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl relative group">
-                        <img src="assets/images/gallery/marcacion_abdomen.webp" alt="Marcación Abdominal VASER HD"
-                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                            loading="lazy" decoding="async" />
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent">
-                        </div>
-                        <div class="absolute bottom-8 left-8 right-8 text-white">
-                            <p class="text-xs uppercase tracking-[0.2em] font-bold mb-2">Resultados HD</p>
-                            <h4 class="text-2xl font-serif italic">"Esculpir el cuerpo es el arte de revelar la mejor
-                                versión de ti mismo."</h4>
-                        </div>
-                    </div>
-                    <div
-                        class="absolute -bottom-6 -right-6 w-32 h-32 bg-primary/10 backdrop-blur-xl border border-primary/20 rounded-full flex flex-col items-center justify-center text-center p-4 z-10 hidden md:flex">
-                        <span class="text-primary font-bold text-lg leading-tight tracking-tighter">Gold Standard</span>
-                    </div>
-                </div>
-            </div>
+ <section class="py-24 bg-white dark:bg-slate-900 relative">
+ <div class="max-w-[1440px] mx-auto px-6">
+ <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+ <div class="flex flex-col gap-8">
+ <div>
+ <span class="text-primary text-xs font-bold tracking-[0.2em] uppercase mb-4 block">Especialidad
+ Signature</span>
+ <h2 class="text-4xl md:text-5xl font-medium text-slate-900 dark:text-white leading-tight">
+ Lipoescultura VASER:<br /><span class="italic text-slate-500 dark:text-slate-400">Presisión
+ Artística</span>
+ </h2>
+ </div>
+ <p class="text-lg text-slate-600 dark:text-slate-300 font-light leading-relaxed">
+ El sistema VASER es una tecnología de ultrasonido de tercera generación que "emulsiona" la grasa
+ de forma selectiva, preservando vasos sanguíneos y nervios. Esto permite a la Dra. Moreno
+ esculpir con una precisión milimétrica imposible de lograr con métodos tradicionales.
+ </p>
+ <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+ <div
+ class="p-6 bg-background-light dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700">
+ <span class="material-symbols-outlined text-primary mb-3">verified</span>
+ <h5 class="font-bold text-sm uppercase tracking-wide mb-2">Piel más Firme</h5>
+ <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">Retracción cutánea
+ hasta un 53% superior gracias al estímulo de colágeno por ultrasonido.</p>
+ </div>
+ <div
+ class="p-6 bg-background-light dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700">
+ <span class="material-symbols-outlined text-primary mb-3">bolt</span>
+ <h5 class="font-bold text-sm uppercase tracking-wide mb-2">Recuperación Rápida</h5>
+ <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">Menor trauma tisular,
+ permitiendo retomar actividades ligeras en tan solo 3 a 7 días.</p>
+ </div>
+ <div
+ class="p-6 bg-background-light dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700">
+ <span class="material-symbols-outlined text-primary mb-3">center_focus_strong</span>
+ <h5 class="font-bold text-sm uppercase tracking-wide mb-2">Alta Definición HD</h5>
+ <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">Especialidad en
+ marcación abdominal y cintura definida para un look natural y atlético.</p>
+ </div>
+ <div
+ class="p-6 bg-background-light dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700">
+ <span class="material-symbols-outlined text-primary mb-3">add_circle</span>
+ <h5 class="font-bold text-sm uppercase tracking-wide mb-2">Definición Viable</h5>
+ <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">Grasa con 85% de
+ viabilidad ideal para reubicación estratégica o simplemente lograr una definición
+ atlética duradera.</p>
+ </div>
+ </div>
+ </div>
+ <div class="relative">
+ <div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl relative group">
+ <img src="assets/images/gallery/marcacion_abdomen.webp" alt="Marcación Abdominal VASER HD"
+ class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+ loading="lazy" decoding="async" />
+ <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent">
+ </div>
+ <div class="absolute bottom-8 left-8 right-8 text-white">
+ <p class="text-xs uppercase tracking-[0.2em] font-bold mb-2">Resultados HD</p>
+ <h4 class="text-2xl font-serif italic">"Esculpir el cuerpo es el arte de revelar la mejor
+ versión de ti mismo."</h4>
+ </div>
+ </div>
+ <div
+ class="absolute -bottom-6 -right-6 w-32 h-32 bg-primary/10 backdrop-blur-xl border border-primary/20 rounded-full flex flex-col items-center justify-center text-center p-4 z-10 hidden md:flex">
+ <span class="text-primary font-bold text-lg leading-tight tracking-tighter">Gold Standard</span>
+ </div>
+ </div>
+ </div>
 
-            <div class="mt-20 p-10 bg-slate-900 text-white rounded-2xl relative overflow-hidden">
-                <div class="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full blur-3xl -mr-32 -mt-32"></div>
-                <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
-                    <div class="max-w-xl">
-                        <h4 class="text-2xl font-medium mb-4">¿Es la Lipoescultura VASER para ti?</h4>
-                        <p class="text-slate-400 font-light">Ideal para tratar grasa rebelde en abdomen, espalda,
-                            cintura, flancos, brazos y ginecomastia masculina que no cede con ejercicio.</p>
-                    </div>
-                    <a href="https://wa.me/573014339938" target="_blank"
-                        class="bg-primary hover:bg-white hover:text-slate-900 text-white px-10 py-4 rounded-full text-sm font-bold uppercase tracking-widest transition-all shadow-xl shadow-primary/20 whitespace-nowrap">
-                        Agenda tu Valoración Hoy
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+ <div class="mt-20 p-10 bg-slate-900 text-white rounded-2xl relative overflow-hidden">
+ <div class="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full blur-3xl -mr-32 -mt-32"></div>
+ <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
+ <div class="max-w-xl">
+ <h4 class="text-2xl font-medium mb-4">¿Es la Lipoescultura VASER para ti?</h4>
+ <p class="text-slate-400 font-light">Ideal para tratar grasa rebelde en abdomen, espalda,
+ cintura, flancos, brazos y ginecomastia masculina que no cede con ejercicio.</p>
+ </div>
+ <a href="https://wa.me/573014339938" target="_blank"
+ class="bg-primary hover:bg-white hover:text-slate-900 text-white px-10 py-4 rounded-full text-sm font-bold uppercase tracking-widest transition-all shadow-xl shadow-primary/20 whitespace-nowrap">
+ Agenda tu Valoración Hoy
+ </a>
+ </div>
+ </div>
+ </div>
+ </section>
 
-    <section class="py-24 bg-background-dark text-white relative overflow-hidden" id="results">
-        <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/10 to-transparent opacity-50">
-        </div>
-        <div class="max-w-[1200px] mx-auto px-6 relative z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <div class="order-2 lg:order-1">
-                    <div
-                        class="comparison-container w-full aspect-[4/5] rounded-xl relative shadow-2xl shadow-black/50 bg-slate-800">
-                        <!-- Portada de antes -->
-                        <div class="absolute inset-0 bg-cover bg-center"
-                            data-alt="Portrait of a woman before aesthetic treatment, neutral expression"
-                            style="background-image: url('assets/images/gallery/Antes_8.png');" loading="lazy">
-                        </div>
-                        <div
-                            class="absolute top-4 left-4 bg-black/60 backdrop-blur-md px-3 py-1 rounded text-xs font-bold uppercase tracking-wider">
-                            Antes</div>
-                        <!-- Portada de después -->
-                        <div class="comparison-overlay absolute inset-0 bg-cover bg-center"
-                            data-alt="Portrait of same woman after treatment with enhanced glow and defined features"
-                            style="background-image: url('assets/images/gallery/Despues_8.png');" loading="lazy">
-                            <div
-                                class="absolute top-4 right-4 bg-primary/90 backdrop-blur-md px-3 py-1 rounded text-xs font-bold uppercase tracking-wider text-white">
-                                Después</div>
-                        </div>
-                        <div
-                            class="comparison-handle absolute inset-y-0 w-0.5 bg-white shadow-[0_0_10px_rgba(255,255,255,0.5)] flex items-center justify-center">
-                            <div
-                                class="w-8 h-8 rounded-full bg-white text-primary flex items-center justify-center shadow-lg">
-                                <span class="material-symbols-outlined text-sm">compare_arrows</span>
-                            </div>
-                        </div>
-                        <div class="absolute bottom-6 w-full text-center pointer-events-none">
-                            <span
-                                class="bg-black/40 backdrop-blur-md px-4 py-2 rounded-full text-xs font-medium tracking-wide">Pasa
-                                el cursor para ver la transformación</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="order-1 lg:order-2 flex flex-col gap-8">
-                    <div>
-                        <span class="text-primary text-sm font-bold tracking-[0.2em] uppercase">Resultados Reales</span>
-                        <h3 class="text-4xl md:text-6xl font-medium mt-4 mb-6 leading-tight">
-                            <span class="italic font-light text-slate-400">Cambios Sutiles,</span><br />
-                            Impacto Profundo.
-                        </h3>
-                        <p class="text-slate-300 text-lg font-light leading-relaxed max-w-md">
-                            Creemos que el mejor trabajo estético pasa desapercibido. Nuestros pacientes lucen
-                            refrescados, descansados y radiantes, nunca "artificiales".
-                        </p>
-                    </div>
-                    <div class="grid grid-cols-2 gap-8 border-t border-white/10 pt-8">
-                        <div>
-                            <p class="text-4xl font-light text-primary mb-1">2k+</p>
-                            <p class="text-sm text-slate-400 uppercase tracking-wider">Procedimientos</p>
-                        </div>
-                        <div>
-                            <p class="text-4xl font-light text-primary mb-1">98%</p>
-                            <p class="text-sm text-slate-400 uppercase tracking-wider">Satisfacción</p>
-                        </div>
-                    </div>
-                    <div>
-                        <a class="inline-flex items-center gap-3 px-10 py-4 bg-white text-slate-900 rounded-full transition-all duration-300 uppercase text-xs tracking-[0.2em] font-bold shadow-[0_0_40px_rgba(255,255,255,0.4)] hover:shadow-[0_0_60px_rgba(255,255,255,0.7)] hover:scale-105 hover:-translate-y-1 group border-2 border-transparent hover:border-white hover:bg-transparent hover:text-white"
-                            href="galeria.html">
-                            Explorar Galería
-                            <span
-                                class="material-symbols-outlined text-lg transition-transform duration-300 group-hover:rotate-[-45deg] group-hover:translate-x-1">arrow_outward</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+ <section class="py-24 bg-background-dark text-white relative overflow-hidden" id="results">
+ <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/10 to-transparent opacity-50">
+ </div>
+ <div class="max-w-[1200px] mx-auto px-6 relative z-10">
+ <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+ <div class="order-2 lg:order-1">
+ <div
+ class="comparison-container w-full aspect-[4/5] rounded-xl relative shadow-2xl shadow-black/50 bg-slate-800">
+ <!-- Portada de antes -->
+ <div class="absolute inset-0 bg-cover bg-center"
+ data-alt="Portrait of a woman before aesthetic treatment, neutral expression"
+ style="background-image: url('assets/images/gallery/Antes_8.png');" loading="lazy">
+ </div>
+ <div
+ class="absolute top-4 left-4 bg-black/60 backdrop-blur-md px-3 py-1 rounded text-xs font-bold uppercase tracking-wider">
+ Antes</div>
+ <!-- Portada de después -->
+ <div class="comparison-overlay absolute inset-0 bg-cover bg-center"
+ data-alt="Portrait of same woman after treatment with enhanced glow and defined features"
+ style="background-image: url('assets/images/gallery/Despues_8.png');" loading="lazy">
+ <div
+ class="absolute top-4 right-4 bg-primary/90 backdrop-blur-md px-3 py-1 rounded text-xs font-bold uppercase tracking-wider text-white">
+ Después</div>
+ </div>
+ <div
+ class="comparison-handle absolute inset-y-0 w-0.5 bg-white shadow-[0_0_10px_rgba(255,255,255,0.5)] flex items-center justify-center">
+ <div
+ class="w-8 h-8 rounded-full bg-white text-primary flex items-center justify-center shadow-lg">
+ <span class="material-symbols-outlined text-sm">compare_arrows</span>
+ </div>
+ </div>
+ <div class="absolute bottom-6 w-full text-center pointer-events-none">
+ <span
+ class="bg-black/40 backdrop-blur-md px-4 py-2 rounded-full text-xs font-medium tracking-wide">Pasa
+ el cursor para ver la transformación</span>
+ </div>
+ </div>
+ </div>
+ <div class="order-1 lg:order-2 flex flex-col gap-8">
+ <div>
+ <span class="text-primary text-sm font-bold tracking-[0.2em] uppercase">Resultados Reales</span>
+ <h3 class="text-4xl md:text-6xl font-medium mt-4 mb-6 leading-tight">
+ <span class="italic font-light text-slate-400">Cambios Sutiles,</span><br />
+ Impacto Profundo.
+ </h3>
+ <p class="text-slate-300 text-lg font-light leading-relaxed max-w-md">
+ Creemos que el mejor trabajo estético pasa desapercibido. Nuestros pacientes lucen
+ refrescados, descansados y radiantes, nunca "artificiales".
+ </p>
+ </div>
+ <div class="grid grid-cols-2 gap-8 border-t border-white/10 pt-8">
+ <div>
+ <p class="text-4xl font-light text-primary mb-1">2k+</p>
+ <p class="text-sm text-slate-400 uppercase tracking-wider">Procedimientos</p>
+ </div>
+ <div>
+ <p class="text-4xl font-light text-primary mb-1">98%</p>
+ <p class="text-sm text-slate-400 uppercase tracking-wider">Satisfacción</p>
+ </div>
+ </div>
+ <div>
+ <a class="inline-flex items-center gap-3 px-10 py-4 bg-white text-slate-900 rounded-full transition-all duration-300 uppercase text-xs tracking-[0.2em] font-bold shadow-[0_0_40px_rgba(255,255,255,0.4)] hover:shadow-[0_0_60px_rgba(255,255,255,0.7)] hover:scale-105 hover:-translate-y-1 group border-2 border-transparent hover:border-white hover:bg-transparent hover:text-white"
+ href="galeria.html">
+ Explorar Galería
+ <span
+ class="material-symbols-outlined text-lg transition-transform duration-300 group-hover:rotate-[-45deg] group-hover:translate-x-1">arrow_outward</span>
+ </a>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
 
-    <section class="py-24 bg-white dark:bg-slate-900/30" id="blog">
-        <div class="max-w-[1440px] mx-auto px-6">
-            <div class="flex flex-col items-center text-center mb-16">
-                <span class="text-primary text-xs font-bold tracking-[0.2em] uppercase">Educación y Perspectivas</span>
-                <h2 class="text-3xl md:text-5xl font-medium text-slate-900 dark:text-white mt-3">Blog de Belleza
-                    Avanzada</h2>
-                <p class="text-slate-500 dark:text-slate-400 mt-4 max-w-xl">
-                    Consejos de expertos sobre las últimas tendencias, tecnologías y tratamientos en el mundo de la
-                    medicina estética.
-                </p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
-                <article class="group cursor-pointer flex flex-col h-full">
-                    <div class="overflow-hidden rounded-lg mb-6 relative">
-                        <img src="assets/images/gallery/Ciencia detras de la armonizacion.webp"
-                            alt="La Ciencia detrás de la Armonización Facial"
-                            class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
-                            loading="lazy" decoding="async" />
-                        <div
-                            class="absolute top-4 left-4 bg-white/90 dark:bg-slate-900/90 backdrop-blur px-4 py-2 text-sm font-bold uppercase tracking-wider text-primary">
-                            Rostro
-                        </div>
-                    </div>
-                    <div class="flex flex-col gap-3 flex-grow">
-                        <span class="text-base text-slate-400 uppercase tracking-wider">12 de Octubre, 2023</span>
-                        <h3
-                            class="text-xl md:text-2xl font-medium text-slate-900 dark:text-white leading-tight group-hover:text-primary transition-colors">
-                            La Ciencia detrás de la Armonización Facial
-                        </h3>
-                        <p class="text-slate-500 text-sm md:text-base line-clamp-2 mb-6">
-                            Descubre cómo usamos los principios de la proporción áurea para realzar tus rasgos naturales
-                            sin cirugía.
-                        </p>
-                        <a class="flex items-center justify-between w-full px-8 py-5 mt-auto text-sm font-bold uppercase tracking-widest text-white bg-slate-900 rounded-xl shadow-xl shadow-slate-900/10 hover:shadow-2xl hover:shadow-primary/30 hover:bg-primary transition-all duration-300 hover:-translate-y-1 group"
-                            href="blog-facial.html">
-                            Leer Más
-                            <span
-                                class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white group-hover:text-primary transition-colors">
-                                <span class="material-symbols-outlined text-sm">arrow_forward</span>
-                            </span>
-                        </a>
-                    </div>
-                </article>
-                <article class="group cursor-pointer flex flex-col h-full">
-                    <div class="overflow-hidden rounded-lg mb-6 relative">
-                        <img src="assets/images/gallery/Vaser Hd.webp" alt="Lipo Láser vs. Liposucción Tradicional"
-                            class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
-                            loading="lazy" decoding="async" />
-                        <div
-                            class="absolute top-4 left-4 bg-white/90 dark:bg-slate-900/90 backdrop-blur px-5 py-2 text-base font-bold uppercase tracking-wider text-primary">
-                            Cuerpo
-                        </div>
-                    </div>
-                    <div class="flex flex-col gap-3 flex-grow">
-                        <span class="text-base text-slate-400 uppercase tracking-wider">28 de Septiembre, 2023</span>
-                        <h3
-                            class="text-xl md:text-2xl font-medium text-slate-900 dark:text-white leading-tight group-hover:text-primary transition-colors">
-                            Vaser HD: La Revolución del Moldeado Corporal
-                        </h3>
-                        <p class="text-slate-500 text-sm md:text-base line-clamp-2 mb-6">
-                            Descubre por qué el ultrasonido es el nuevo "estándar de oro" para lograr una definición
-                            muscular atlética y natural.
-                        </p>
-                        <a class="flex items-center justify-between w-full px-8 py-5 mt-auto text-sm font-bold uppercase tracking-widest text-white bg-slate-900 rounded-xl shadow-xl shadow-slate-900/10 hover:shadow-2xl hover:shadow-primary/30 hover:bg-primary transition-all duration-300 hover:-translate-y-1 group"
-                            href="blog-vaser.html">
-                            Leer Más
-                            <span
-                                class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white group-hover:text-primary transition-colors">
-                                <span class="material-symbols-outlined text-sm">arrow_forward</span>
-                            </span>
-                        </a>
-                    </div>
-                </article>
-                <article class="group cursor-pointer flex flex-col h-full">
-                    <div class="overflow-hidden rounded-lg mb-6 relative">
-                        <img src="assets/images/gallery/Preparando tu piel.webp"
-                            alt="Preparando tu Piel para el Invierno"
-                            class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
-                            loading="lazy" decoding="async" />
-                        <div
-                            class="absolute top-4 left-4 bg-white/90 dark:bg-slate-900/90 backdrop-blur px-5 py-2 text-base font-bold uppercase tracking-wider text-primary">
-                            Piel
-                        </div>
-                    </div>
-                    <div class="flex flex-col gap-3 flex-grow">
-                        <span class="text-base text-slate-400 uppercase tracking-wider">15 de Septiembre, 2023</span>
-                        <h3
-                            class="text-xl md:text-2xl font-medium text-slate-900 dark:text-white leading-tight group-hover:text-primary transition-colors">
-                            Preparando tu Piel para el Invierno
-                        </h3>
-                        <p class="text-slate-500 text-sm md:text-base line-clamp-2 mb-6">
-                            Tratamientos esenciales de hidratación y rutinas en casa para mantener tu brillo toda la
-                            temporada.
-                        </p>
-                        <a class="flex items-center justify-between w-full px-8 py-5 mt-auto text-sm font-bold uppercase tracking-widest text-white bg-slate-900 rounded-xl shadow-xl shadow-slate-900/10 hover:shadow-2xl hover:shadow-primary/30 hover:bg-primary transition-all duration-300 hover:-translate-y-1 group"
-                            href="blog-bioestimulacion.html">
-                            Leer Más
-                            <span
-                                class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white group-hover:text-primary transition-colors">
-                                <span class="material-symbols-outlined text-sm">arrow_forward</span>
-                            </span>
-                        </a>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-
-
-
-    <section class="pt-32 relative" id="contact">
-        <div class="w-full h-[500px] md:h-[650px] relative bg-slate-900 overflow-hidden">
-            <!-- Mapa centrado en Bogotá (aprox Parque de la 93) -->
-            <iframe allowfullscreen=""
-                class="w-full h-full border-0 map-dark-mode grayscale invert brightness-[0.8] contrast-125"
-                loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-                src="https://maps.google.com/maps?q=Cl.+53b+%2324-80,+Teusaquillo,+Bogot%C3%A1&t=&z=15&ie=UTF8&iwloc=&output=embed">
-            </iframe>
-            <div class="absolute inset-0 bg-primary/5 pointer-events-none mix-blend-overlay"></div>
-            <div
-                class="absolute top-1/2 left-1/2 md:left-20 transform -translate-x-1/2 md:translate-x-0 -translate-y-1/2 bg-background-dark/95 backdrop-blur-md p-8 md:p-10 w-[92%] md:w-full max-w-sm md:max-w-md border border-primary/20 shadow-2xl z-10">
-                <h3 class="text-3xl font-medium text-white mb-8 border-b border-primary/30 pb-4">Ubicación</h3>
-                <div class="space-y-6">
-                    <div class="flex items-start gap-4">
-                        <div
-                            class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-primary shrink-0 border border-primary/20">
-                            <span class="material-symbols-outlined">location_on</span>
-                        </div>
-                        <div>
-                            <h4 class="text-white font-bold uppercase tracking-wider text-sm mb-1">Medicina Estética
-                                Avanzada<br />Dra Mildred Moreno</h4>
-                            <p class="text-slate-400 text-sm leading-relaxed">
-                                Cl. 53b #24-80<br />
-                                Teusaquillo, Bogotá
-                            </p>
-                        </div>
-                    </div>
-                    <div class="flex items-start gap-4">
-                        <div
-                            class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-primary shrink-0 border border-primary/20">
-                            <span class="material-symbols-outlined">schedule</span>
-                        </div>
-                        <div>
-                            <h4 class="text-white font-bold uppercase tracking-wider text-sm mb-1">Horario de
-                                Atención
-                            </h4>
-                            <p class="text-slate-400 text-sm leading-relaxed">
-                                Lunes - Viernes: 9:00 AM - 6:00 PM<br />
-                                Sábado: Solo con Cita Previa
-                            </p>
-                        </div>
-                    </div>
-                    <div class="flex items-start gap-4">
-                        <div
-                            class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-primary shrink-0 border border-primary/20">
-                            <span class="material-symbols-outlined">call</span>
-                        </div>
-                        <div>
-                            <h4 class="text-white font-bold uppercase tracking-wider text-sm mb-1">Contacto</h4>
-                            <p class="text-slate-400 text-sm leading-relaxed">
-                                +57 301 4339938<br />
-                                citas@dramoreno.com
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="mt-8 pt-6 border-t border-slate-800">
-                    <a class="w-full block bg-primary text-white text-center py-3 rounded text-xs font-bold uppercase tracking-widest hover:bg-white hover:text-background-dark transition-colors duration-300 shadow-lg shadow-primary/20"
-                        href="https://www.google.com/maps/search/?api=1&query=Cl.+53b+%2324-80%2C+Teusaquillo%2C+Bogot%C3%A1%2C+Colombia"
-                        target="_blank">
-                        Cómo Llegar
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+ <section class="py-24 bg-white dark:bg-slate-900/30" id="blog">
+ <div class="max-w-[1440px] mx-auto px-6">
+ <div class="flex flex-col items-center text-center mb-16">
+ <span class="text-primary text-xs font-bold tracking-[0.2em] uppercase">Educación y Perspectivas</span>
+ <h2 class="text-3xl md:text-5xl font-medium text-slate-900 dark:text-white mt-3">Blog de Belleza
+ Avanzada</h2>
+ <p class="text-slate-500 dark:text-slate-400 mt-4 max-w-xl">
+ Consejos de expertos sobre las últimas tendencias, tecnologías y tratamientos en el mundo de la
+ medicina .
+ </p>
+ </div>
+ <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+ <article class="group cursor-pointer flex flex-col h-full">
+ <div class="overflow-hidden rounded-lg mb-6 relative">
+ <img src="assets/images/gallery/Ciencia detras de la armonizacion.webp"
+ alt="La Ciencia detrás de la Armonización Facial"
+ class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
+ loading="lazy" decoding="async" />
+ <div
+ class="absolute top-4 left-4 bg-white/90 dark:bg-slate-900/90 backdrop-blur px-4 py-2 text-sm font-bold uppercase tracking-wider text-primary">
+ Rostro
+ </div>
+ </div>
+ <div class="flex flex-col gap-3 flex-grow">
+ <span class="text-base text-slate-400 uppercase tracking-wider">12 de Octubre, 2023</span>
+ <h3
+ class="text-xl md:text-2xl font-medium text-slate-900 dark:text-white leading-tight group-hover:text-primary transition-colors">
+ La Ciencia detrás de la Armonización Facial
+ </h3>
+ <p class="text-slate-500 text-sm md:text-base line-clamp-2 mb-6">
+ Descubre cómo usamos los principios de la proporción áurea para realzar tus rasgos naturales
+ sin cirugía.
+ </p>
+ <a class="flex items-center justify-between w-full px-8 py-5 mt-auto text-sm font-bold uppercase tracking-widest text-white bg-slate-900 rounded-xl shadow-xl shadow-slate-900/10 hover:shadow-2xl hover:shadow-primary/30 hover:bg-primary transition-all duration-300 hover:-translate-y-1 group"
+ href="blog-facial.html">
+ Leer Más
+ <span
+ class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white group-hover:text-primary transition-colors">
+ <span class="material-symbols-outlined text-sm">arrow_forward</span>
+ </span>
+ </a>
+ </div>
+ </article>
+ <article class="group cursor-pointer flex flex-col h-full">
+ <div class="overflow-hidden rounded-lg mb-6 relative">
+ <img src="assets/images/gallery/Vaser Hd.webp" alt="Lipo Láser vs. Liposucción Tradicional"
+ class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
+ loading="lazy" decoding="async" />
+ <div
+ class="absolute top-4 left-4 bg-white/90 dark:bg-slate-900/90 backdrop-blur px-5 py-2 text-base font-bold uppercase tracking-wider text-primary">
+ Cuerpo
+ </div>
+ </div>
+ <div class="flex flex-col gap-3 flex-grow">
+ <span class="text-base text-slate-400 uppercase tracking-wider">28 de Septiembre, 2023</span>
+ <h3
+ class="text-xl md:text-2xl font-medium text-slate-900 dark:text-white leading-tight group-hover:text-primary transition-colors">
+ Vaser HD: La Revolución del Moldeado Corporal
+ </h3>
+ <p class="text-slate-500 text-sm md:text-base line-clamp-2 mb-6">
+ Descubre por qué el ultrasonido es el nuevo "estándar de oro" para lograr una definición
+ muscular atlética y natural.
+ </p>
+ <a class="flex items-center justify-between w-full px-8 py-5 mt-auto text-sm font-bold uppercase tracking-widest text-white bg-slate-900 rounded-xl shadow-xl shadow-slate-900/10 hover:shadow-2xl hover:shadow-primary/30 hover:bg-primary transition-all duration-300 hover:-translate-y-1 group"
+ href="blog-vaser.html">
+ Leer Más
+ <span
+ class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white group-hover:text-primary transition-colors">
+ <span class="material-symbols-outlined text-sm">arrow_forward</span>
+ </span>
+ </a>
+ </div>
+ </article>
+ <article class="group cursor-pointer flex flex-col h-full">
+ <div class="overflow-hidden rounded-lg mb-6 relative">
+ <img src="assets/images/gallery/Preparando tu piel.webp"
+ alt="Preparando tu Piel para el Invierno"
+ class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
+ loading="lazy" decoding="async" />
+ <div
+ class="absolute top-4 left-4 bg-white/90 dark:bg-slate-900/90 backdrop-blur px-5 py-2 text-base font-bold uppercase tracking-wider text-primary">
+ Piel
+ </div>
+ </div>
+ <div class="flex flex-col gap-3 flex-grow">
+ <span class="text-base text-slate-400 uppercase tracking-wider">15 de Septiembre, 2023</span>
+ <h3
+ class="text-xl md:text-2xl font-medium text-slate-900 dark:text-white leading-tight group-hover:text-primary transition-colors">
+ Preparando tu Piel para el Invierno
+ </h3>
+ <p class="text-slate-500 text-sm md:text-base line-clamp-2 mb-6">
+ Tratamientos esenciales de hidratación y rutinas en casa para mantener tu brillo toda la
+ temporada.
+ </p>
+ <a class="flex items-center justify-between w-full px-8 py-5 mt-auto text-sm font-bold uppercase tracking-widest text-white bg-slate-900 rounded-xl shadow-xl shadow-slate-900/10 hover:shadow-2xl hover:shadow-primary/30 hover:bg-primary transition-all duration-300 hover:-translate-y-1 group"
+ href="blog-bioestimulacion.html">
+ Leer Más
+ <span
+ class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white group-hover:text-primary transition-colors">
+ <span class="material-symbols-outlined text-sm">arrow_forward</span>
+ </span>
+ </a>
+ </div>
+ </article>
+ </div>
+ </div>
+ </section>
 
 
 
 
-    <footer
-        class="bg-background-light dark:bg-background-dark border-t border-slate-200 dark:border-slate-800 pt-16 pb-10 font-sans">
-        <div class="max-w-[1440px] mx-auto px-6">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-                <div
-                    class="col-span-1 md:col-span-1 flex flex-col items-center md:items-start text-center md:text-left">
-                    <div class="mb-6">
-                        <img src="assets/images/gallery/logo.webp" alt="Dra. Mildred Moreno Logo"
-                            class="h-16 w-auto object-contain" loading="lazy" decoding="async">
-                    </div>
-                    <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6 max-w-sm">
-                        Elevando la medicina estética a través de la ciencia y el arte. Experimenta la diferencia de
-                        una verdadera maestría.
-                    </p>
-                    <div class="flex gap-4">
-                        <a class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-colors text-slate-600 dark:text-slate-300"
-                            href="https://www.instagram.com/avanzadamedicina_estetica?igsh=c3N3eGJqbGp3ZWQ0&utm_source=qr"
-                            target="_blank">
-                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                                <path
-                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.85-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z">
-                                </path>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                <div>
-                    <h5 class="font-bold text-slate-900 dark:text-white uppercase tracking-wider text-xs mb-6">
-                        Clínica
-                    </h5>
-                    <ul class="flex flex-col gap-3">
-                        <li><a class="text-sm text-slate-500 hover:text-primary transition-colors"
-                                href="filosofia.html">Nuestra Filosofía</a></li>
-                        <li><a class="text-sm text-slate-500 hover:text-primary transition-colors"
-                                href="galeria.html">Resultados</a></li>
-                    </ul>
-                </div>
-                <h5 class="font-bold text-slate-900 dark:text-white uppercase tracking-wider text-xs mb-6">
-                    Tratamientos</h5>
-                <ul class="flex flex-col gap-3">
-                    <li><a class="text-sm text-slate-500 hover:text-primary transition-colors"
-                            href="servicios.html#facial">Rostro & Armonización</a></li>
-                    <li><a class="text-sm text-slate-500 hover:text-primary transition-colors"
-                            href="servicios.html#corporal">Contorno Corporal</a></li>
-                    <li><a class="text-sm text-slate-500 hover:text-primary transition-colors"
-                            href="servicio-explantacion.html">Explantación Integral</a></li>
-                </ul>
-                <div>
-                    <h5 class="font-bold text-slate-900 dark:text-white uppercase tracking-wider text-xs mb-6">
-                        Contacto
-                    </h5>
-                    <ul class="flex flex-col gap-4">
-                        <li class="flex items-start gap-3 text-sm text-slate-500">
-                            <span class="material-symbols-outlined text-primary text-lg mt-0.5">location_on</span>
-                            <span>Cl. 53b #24-80, Teusaquillo<br />Bogotá, Colombia</span>
-                        </li>
-                        <li class="flex items-center gap-3 text-sm text-slate-500">
-                            <span class="material-symbols-outlined text-primary text-lg">call</span>
-                            <span>+57 301 4339938</span>
-                        </li>
-                        <li class="flex items-center gap-3 text-sm text-slate-500">
-                            <span class="material-symbols-outlined text-primary text-lg">mail</span>
-                            <span>citas@dramoreno.com</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div
-                class="border-t border-slate-200 dark:border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                <p class="text-xs text-slate-400">© 2023 Dra. Mildred Moreno. Todos los derechos reservados.</p>
-                <div class="flex gap-6">
-                    <a class="text-xs text-slate-400 hover:text-primary" href="legal.html">Política de
-                        Privacidad</a>
-                    <a class="text-xs text-slate-400 hover:text-primary" href="legal.html">Términos de Servicio</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <a class="fixed bottom-8 right-8 z-50 flex items-center justify-center w-14 h-14 bg-[#25D366] text-white rounded-full shadow-lg shadow-green-900/20 hover:scale-110 transition-transform duration-300 group"
-        href="https://wa.me/573014339938?text=Hola%2C%20me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20procedimientos%20de%20Medicina%20Est%C3%A9tica%20Avanzada%20con%20la%20Dra.%20Mildred%20Moreno."
-        target="_blank">
-        <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path
-                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z">
-            </path>
-        </svg>
-        <span
-            class="absolute right-full mr-3 bg-white text-slate-900 px-3 py-1 rounded-md text-xs font-bold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity shadow-sm pointer-events-none">Reservar
-            por WhatsApp</span>
-    </a>
-    <script>
-        // Reveal on Scroll Logic
-        const observerOptions = {
-            threshold: 0.05,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                    // Once revealed, no need to observe anymore
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-
-        // Initialize reveal elements
-        document.querySelectorAll('section, article, .editorial-card, .cta-section').forEach(el => {
-            el.classList.add('reveal');
-            observer.observe(el);
-        });
-
-        // Mobile Menu Logic
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const closeMenuBtn = document.getElementById('close-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const mobileLinks = document.querySelectorAll('.mobile-link');
-        const menuIcon = mobileMenuBtn.querySelector('.dropdown-icon');
-
-        function toggleMenu() {
-            const isOpen = mobileMenu.classList.contains('translate-x-0');
-
-            if (isOpen) {
-                // Close menu
-                mobileMenu.classList.remove('translate-x-0', 'opacity-100', 'pointer-events-auto');
-                mobileMenu.classList.add('translate-x-full', 'opacity-0', 'pointer-events-none');
-                document.body.classList.remove('overflow-hidden');
-            } else {
-                // Open menu
-                mobileMenu.classList.add('translate-x-0', 'opacity-100', 'pointer-events-auto');
-                mobileMenu.classList.remove('translate-x-full', 'opacity-0', 'pointer-events-none');
-                document.body.classList.add('overflow-hidden');
-            }
-        }
-
-        mobileMenuBtn.addEventListener('click', toggleMenu);
-        closeMenuBtn.addEventListener('click', toggleMenu);
-        mobileLinks.forEach(link => link.addEventListener('click', toggleMenu));
-    </script>
-
-    <!-- Promo Pop-up Structure -->
-    <div id="promo-modal"
-        class="fixed inset-0 z-[2000] flex items-center justify-center p-0 md:p-6 bg-black/70 backdrop-blur-lg opacity-0 invisible transition-all duration-500">
-        <div id="promo-content"
-            class="promo-glass max-w-6xl w-full h-full md:h-auto md:max-h-[90vh] md:rounded-[2rem] overflow-y-auto md:overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,0,0,0.6)] transform scale-110 opacity-0 transition-all duration-700">
-            <div class="relative h-full flex flex-col md:flex-row">
-                <button id="close-promo-btn"
-                    class="absolute top-6 right-6 z-30 p-3 rounded-full bg-black/40 hover:bg-black/60 text-white backdrop-blur-md transition-all hover:rotate-90">
-                    <span class="material-symbols-outlined text-2xl">close</span>
-                </button>
-
-                <!-- Left: Full 4:5 Image (No Cropping) -->
-                <div class="w-full md:w-[580px] shrink-0 aspect-[4/5] relative bg-slate-100 overflow-hidden group">
-                    <img src="assets/images/gallery/Promo Abril.png" alt="Promoción VASER"
-                        class="absolute inset-0 w-full h-full object-contain transition-all duration-[15s] group-hover:scale-105 group-hover:brightness-105" />
-                    <div
-                        class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-700 pointer-events-none">
-                    </div>
-                </div>
-
-                <!-- Right: Persuasive Content (Flexible) -->
-                <div class="flex-grow p-8 md:p-16 flex flex-col justify-center gap-6 md:gap-8 relative bg-white/5">
-                    <div class="space-y-5">
-                        <div class="flex items-center gap-3">
-                            <div class="h-px w-8 bg-blue-600"></div>
-                            <span
-                                class="text-blue-600 dark:text-blue-400 text-sm font-bold tracking-[0.3em] uppercase">Mes de la Madre</span>
-                        </div>
-                        <h3
-                            class="text-4xl md:text-7xl font-medium text-slate-900 dark:text-white leading-[0.9] md:leading-[0.85] tracking-tighter">
-                            El Regalo <br><span class="italic text-blue-600 dark:text-blue-400 font-light">Perfecto</span>
-                        </h3>
-                    </div>
-
-                    <div class="space-y-6">
-                        <p
-                            class="text-xl md:text-2xl text-slate-600 dark:text-slate-200 font-light leading-relaxed max-w-md">
-                            Celebra este mes con un obsequio exclusivo para ti o para mamá.
-                        </p>
-                        <div class="flex items-center gap-3">
-                            <span
-                                class="text-4xl md:text-8xl font-display text-blue-600 dark:text-blue-500 drop-shadow-sm leading-none">10%</span>
-                            <div class="space-y-0">
-                                <span
-                                    class="block text-sm md:text-lg uppercase tracking-widest text-slate-400 font-light leading-tight">Descuento</span>
-                                <span
-                                    class="block text-[10px] md:text-base uppercase tracking-widest text-blue-600 dark:text-blue-400 font-bold leading-tight">Lipoescultura</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="flex flex-col gap-6 mt-4">
-                        <a href="https://wa.me/573014339938?text=Hola%2C%20v%C3%AD%20la%20promoci%C3%B3n%20del%20Mes%20de%20la%20Madre%20y%20quiero%20reclamar%20mi%20regalo."
-                            target="_blank"
-                            class="group relative overflow-hidden bg-blue-600 text-white text-center py-6 rounded-2xl text-base font-bold uppercase tracking-[0.3em] transition-all duration-500 shadow-[0_20px_40px_-10px_rgba(37,99,235,0.5)] hover:shadow-[0_25px_50px_-12px_rgba(37,99,235,0.7)] hover:bg-blue-700 transform hover:-translate-y-1">
-                            <span class="relative z-10">Reclamar mi Regalo</span>
-                            <div
-                                class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000">
-                            </div>
-                        </a>
-                        <div class="flex items-center justify-center gap-2 opacity-60">
-                            <span class="material-symbols-outlined text-sm">schedule</span>
-                            <p class="text-[12px] uppercase tracking-widest font-medium">Hasta el 5 de Mayo</p>
-                        </div>
-                    </div>
+ <section class="pt-32 relative" id="contact">
+ <div class="w-full h-[500px] md:h-[650px] relative bg-slate-900 overflow-hidden">
+ <!-- Mapa centrado en Bogotá (aprox Parque de la 93) -->
+ <iframe allowfullscreen=""
+ class="w-full h-full border-0 map-dark-mode grayscale invert brightness-[0.8] contrast-125"
+ loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+ src="https://maps.google.com/maps?q=Cl.+53b+%2324-80,+Teusaquillo,+Bogot%C3%A1&t=&z=15&ie=UTF8&iwloc=&output=embed">
+ </iframe>
+ <div class="absolute inset-0 bg-primary/5 pointer-events-none mix-blend-overlay"></div>
+ <div
+ class="absolute top-1/2 left-1/2 md:left-20 transform -translate-x-1/2 md:translate-x-0 -translate-y-1/2 bg-background-dark/95 backdrop-blur-md p-8 md:p-10 w-[92%] md:w-full max-w-sm md:max-w-md border border-primary/20 shadow-2xl z-10">
+ <h3 class="text-3xl font-medium text-white mb-8 border-b border-primary/30 pb-4">Ubicación</h3>
+ <div class="space-y-6">
+ 
+ <div class="flex items-start gap-4">
+ <div
+ class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-primary shrink-0 border border-primary/20">
+ <span class="material-symbols-outlined">schedule</span>
+ </div>
+ <div>
+ <h4 class="text-white font-bold uppercase tracking-wider text-sm mb-1">Horario de
+ Atención
+ </h4>
+ <p class="text-slate-400 text-sm leading-relaxed">
+ Lunes - Viernes: 9:00 AM - 6:00 PM<br />
+ Sábado: Solo con Cita Previa
+ </p>
+ </div>
+ </div>
+ <div class="flex items-start gap-4">
+ <div
+ class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-primary shrink-0 border border-primary/20">
+ <span class="material-symbols-outlined">call</span>
+ </div>
+ <div>
+ <h4 class="text-white font-bold uppercase tracking-wider text-sm mb-1">Contacto</h4>
+ <p class="text-slate-400 text-sm leading-relaxed">
+ +57 301 4339938<br />
+ citas@dramoreno.com
+ </p>
+ </div>
+ </div>
+ </div>
+ <div class="mt-8 pt-6 border-t border-slate-800">
+ <a class="w-full block bg-primary text-white text-center py-3 rounded text-xs font-bold uppercase tracking-widest hover:bg-white hover:text-background-dark transition-colors duration-300 shadow-lg shadow-primary/20"
+ href="https://www.google.com/maps/search/?api=1&query=Cl.+53b+%2324-80%2C+Teusaquillo%2C+Bogot%C3%A1%2C+Colombia"
+ target="_blank">
+ Cómo Llegar
+ </a>
+ </div>
+ </div>
+ </div>
+ </section>
 
 
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <script>
-        // Promo Pop-up Logic
-        function initPromoPopup() {
-            console.log("Promo Pop-up: Inicializando...");
-            const promoModal = document.getElementById('promo-modal');
-            const promoContent = document.getElementById('promo-content');
-            const closePromoBtn = document.getElementById('close-promo-btn');
 
-            if (!promoModal || !promoContent) {
-                console.error("Promo Pop-up: No se encontraron los elementos necesarios.");
-                return;
-            }
+ <footer
+ class="bg-background-light dark:bg-background-dark border-t border-slate-200 dark:border-slate-800 pt-16 pb-10 font-sans">
+ <div class="max-w-[1440px] mx-auto px-6">
+ <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+ <div
+ class="col-span-1 md:col-span-1 flex flex-col items-center md:items-start text-center md:text-left">
+ <div class="mb-6">
+ <img src="assets/images/gallery/logo.webp" alt="Dra. Mildred Moreno Logo"
+ class="h-16 w-auto object-contain" loading="lazy" decoding="async">
+ </div>
+ <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6 max-w-sm">
+ Elevando la medicina a través de la ciencia y el arte. Experimenta la diferencia de
+ una verdadera maestría.
+ </p>
+ <div class="flex gap-4">
+ <a class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-colors text-slate-600 dark:text-slate-300"
+ href="https://www.instagram.com/avanzadamedicina_ ?igsh=c3N3eGJqbGp3ZWQ0&utm_source=qr"
+ target="_blank">
+ <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+ <path
+ d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.85-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z">
+ </path>
+ </svg>
+ </a>
+ </div>
+ </div>
+ <div>
+ <h5 class="font-bold text-slate-900 dark:text-white uppercase tracking-wider text-xs mb-6">
+ Clínica
+ </h5>
+ <ul class="flex flex-col gap-3">
+ <li><a class="text-sm text-slate-500 hover:text-primary transition-colors"
+ href="filosofia.html">Nuestra Filosofía</a></li>
+ <li><a class="text-sm text-slate-500 hover:text-primary transition-colors"
+ href="galeria.html">Resultados</a></li>
+ </ul>
+ </div>
+ <h5 class="font-bold text-slate-900 dark:text-white uppercase tracking-wider text-xs mb-6">
+ Tratamientos</h5>
+ <ul class="flex flex-col gap-3">
+ <li><a class="text-sm text-slate-500 hover:text-primary transition-colors"
+ href="servicios.html#facial">Rostro & Armonización</a></li>
+ <li><a class="text-sm text-slate-500 hover:text-primary transition-colors"
+ href="servicios.html#corporal">Contorno Corporal</a></li>
+ <li><a class="text-sm text-slate-500 hover:text-primary transition-colors"
+ href="servicio-explantacion.html">Explantación Integral</a></li>
+ </ul>
+ <div>
+ <h5 class="font-bold text-slate-900 dark:text-white uppercase tracking-wider text-xs mb-6">
+ Contacto
+ </h5>
+ <ul class="flex flex-col gap-4">
+ 
+ <li class="flex items-center gap-3 text-sm text-slate-500">
+ <span class="material-symbols-outlined text-primary text-lg">call</span>
+ <span>+57 301 4339938</span>
+ </li>
+ <li class="flex items-center gap-3 text-sm text-slate-500">
+ <span class="material-symbols-outlined text-primary text-lg">mail</span>
+ <span>citas@dramoreno.com</span>
+ </li>
+ </ul>
+ </div>
+ </div>
+ <div
+ class="border-t border-slate-200 dark:border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+ <p class="text-xs text-slate-400">© 2023 Dra. Mildred Moreno. Todos los derechos reservados.</p>
+ <div class="flex gap-6">
+ <a class="text-xs text-slate-400 hover:text-primary" href="legal.html">Política de
+ Privacidad</a>
+ <a class="text-xs text-slate-400 hover:text-primary" href="legal.html">Términos de Servicio</a>
+ </div>
+ </div>
+ </div>
+ </footer>
+ <a class="fixed bottom-8 right-8 z-50 flex items-center justify-center w-14 h-14 bg-[#25D366] text-white rounded-full shadow-lg shadow-green-900/20 hover:scale-110 transition-transform duration-300 group"
+ href="https://wa.me/573014339938?text=Hola%2C%20me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20procedimientos%20de%20Medicina%20Est%C3%A9tica%20Avanzada%20con%20la%20Dra.%20Mildred%20Moreno."
+ target="_blank">
+ <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+ <path
+ d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z">
+ </path>
+ </svg>
+ <span
+ class="absolute right-full mr-3 bg-white text-slate-900 px-3 py-1 rounded-md text-xs font-bold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity shadow-sm pointer-events-none">Reservar
+ por WhatsApp</span>
+ </a>
+ <script>
+ // Reveal on Scroll Logic
+ const observerOptions = {
+ threshold: 0.05,
+ rootMargin: '0px 0px -50px 0px'
+ };
 
-            console.log("Promo Pop-up: Mostrando modal inmediatamente.");
-            // Remove hidden classes immediately
-            promoModal.classList.remove('opacity-0', 'invisible');
-            promoContent.classList.remove('scale-110', 'opacity-0');
-            promoContent.classList.add('scale-100', 'opacity-100');
-            document.body.classList.add('overflow-hidden');
+ const observer = new IntersectionObserver((entries) => {
+ entries.forEach(entry => {
+ if (entry.isIntersecting) {
+ entry.target.classList.add('active');
+ // Once revealed, no need to observe anymore
+ observer.unobserve(entry.target);
+ }
+ });
+ }, observerOptions);
 
-            function closePromo() {
-                console.log("Promo Pop-up: Cerrando modal.");
-                promoModal.classList.add('opacity-0', 'invisible');
-                promoContent.classList.remove('scale-100', 'opacity-100');
-                promoContent.classList.add('scale-110', 'opacity-0');
-                document.body.classList.remove('overflow-hidden');
-                // For now, we still allow seeing it on refresh for verification
-                // localStorage.setItem('women_month_promo_dismissed', new Date().getTime().toString());
-            }
+ // Initialize reveal elements
+ document.querySelectorAll('section, article, .editorial-card, .cta-section').forEach(el => {
+ el.classList.add('reveal');
+ observer.observe(el);
+ });
 
-            closePromoBtn.addEventListener('click', closePromo);
-            promoModal.addEventListener('click', (e) => {
-                if (e.target === promoModal) closePromo();
-            });
-        }
+ // Mobile Menu Logic
+ const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+ const closeMenuBtn = document.getElementById('close-menu-btn');
+ const mobileMenu = document.getElementById('mobile-menu');
+ const mobileLinks = document.querySelectorAll('.mobile-link');
+ const menuIcon = mobileMenuBtn.querySelector('.dropdown-icon');
 
-        // Asegurarnos de que el DOM esté listo
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', initPromoPopup);
-        } else {
-            initPromoPopup();
-        }
-    </script>
-    <script defer src="/_vercel/insights/script.js"></script>
+ function toggleMenu() {
+ const isOpen = mobileMenu.classList.contains('translate-x-0');
+
+ if (isOpen) {
+ // Close menu
+ mobileMenu.classList.remove('translate-x-0', 'opacity-100', 'pointer-events-auto');
+ mobileMenu.classList.add('translate-x-full', 'opacity-0', 'pointer-events-none');
+ document.body.classList.remove('overflow-hidden');
+ } else {
+ // Open menu
+ mobileMenu.classList.add('translate-x-0', 'opacity-100', 'pointer-events-auto');
+ mobileMenu.classList.remove('translate-x-full', 'opacity-0', 'pointer-events-none');
+ // // document.body.classList.add('overflow-hidden');
+ }
+ }
+
+ mobileMenuBtn.addEventListener('click', toggleMenu);
+ closeMenuBtn.addEventListener('click', toggleMenu);
+ mobileLinks.forEach(link => link.addEventListener('click', toggleMenu));
+ </script>
+
+ <!-- Promo Pop-up Structure -->
+ <div id="promo-modal"
+ class="fixed inset-0 z-[2000] flex items-center justify-center p-0 md:p-6 bg-black/70 backdrop-blur-lg opacity-0 invisible transition-all duration-500">
+ <div id="promo-content"
+ class="promo-glass max-w-6xl w-full h-full md:h-auto md:max-h-[90vh] md:rounded-[2rem] overflow-y-auto md:overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,0,0,0.6)] transform scale-110 opacity-0 transition-all duration-700">
+ <div class="relative h-full flex flex-col md:flex-row">
+ <button id="close-promo-btn"
+ class="absolute top-6 right-6 z-30 p-3 rounded-full bg-black/40 hover:bg-black/60 text-white backdrop-blur-md transition-all hover:rotate-90">
+ <span class="material-symbols-outlined text-2xl">close</span>
+ </button>
+
+ <!-- Left: Full 4:5 Image (No Cropping) -->
+ <div class="w-full md:w-[580px] shrink-0 aspect-[4/5] relative bg-slate-100 overflow-hidden group">
+ <img src="assets/images/gallery/Promo Abril.png" alt="Promoción VASER"
+ class="absolute inset-0 w-full h-full object-contain transition-all duration-[15s] group-hover:scale-105 group-hover:brightness-105" />
+ <div
+ class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-700 pointer-events-none">
+ </div>
+ </div>
+
+ <!-- Right: Persuasive Content (Flexible) -->
+ <div class="flex-grow p-8 md:p-16 flex flex-col justify-center gap-6 md:gap-8 relative bg-white/5">
+ <div class="space-y-5">
+ <div class="flex items-center gap-3">
+ <div class="h-px w-8 bg-blue-600"></div>
+ <span
+ class="text-blue-600 dark:text-blue-400 text-sm font-bold tracking-[0.3em] uppercase">Mes de la Madre</span>
+ </div>
+ <h3
+ class="text-4xl md:text-7xl font-medium text-slate-900 dark:text-white leading-[0.9] md:leading-[0.85] tracking-tighter">
+ El Regalo <br><span class="italic text-blue-600 dark:text-blue-400 font-light">Perfecto</span>
+ </h3>
+ </div>
+
+ <div class="space-y-6">
+ <p
+ class="text-xl md:text-2xl text-slate-600 dark:text-slate-200 font-light leading-relaxed max-w-md">
+ Celebra este mes con un obsequio exclusivo para ti o para mamá.
+ </p>
+ <div class="flex items-center gap-3">
+ <span
+ class="text-4xl md:text-8xl font-display text-blue-600 dark:text-blue-500 drop-shadow-sm leading-none">10%</span>
+ <div class="space-y-0">
+ <span
+ class="block text-sm md:text-lg uppercase tracking-widest text-slate-400 font-light leading-tight">Descuento</span>
+ <span
+ class="block text-[10px] md:text-base uppercase tracking-widest text-blue-600 dark:text-blue-400 font-bold leading-tight">Lipoescultura</span>
+ </div>
+ </div>
+ </div>
+
+ <div class="flex flex-col gap-6 mt-4">
+ <a href="https://wa.me/573014339938?text=Hola%2C%20v%C3%AD%20la%20promoci%C3%B3n%20del%20Mes%20de%20la%20Madre%20y%20quiero%20reclamar%20mi%20regalo."
+ target="_blank"
+ class="group relative overflow-hidden bg-blue-600 text-white text-center py-6 rounded-2xl text-base font-bold uppercase tracking-[0.3em] transition-all duration-500 shadow-[0_20px_40px_-10px_rgba(37,99,235,0.5)] hover:shadow-[0_25px_50px_-12px_rgba(37,99,235,0.7)] hover:bg-blue-700 transform hover:-translate-y-1">
+ <span class="relative z-10">Reclamar mi Regalo</span>
+ <div
+ class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000">
+ </div>
+ </a>
+ <div class="flex items-center justify-center gap-2 opacity-60">
+ <span class="material-symbols-outlined text-sm">schedule</span>
+ <p class="text-[12px] uppercase tracking-widest font-medium">Hasta el 5 de Mayo</p>
+ </div>
+ </div>
+
+
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <script>
+ // Promo Pop-up Logic
+ function initPromoPopup() {
+ console.log("Promo Pop-up: Inicializando...");
+ const promoModal = document.getElementById('promo-modal');
+ const promoContent = document.getElementById('promo-content');
+ const closePromoBtn = document.getElementById('close-promo-btn');
+
+ if (!promoModal || !promoContent) {
+ console.error("Promo Pop-up: No se encontraron los elementos necesarios.");
+ return;
+ }
+
+ console.log("Promo Pop-up: Mostrando modal inmediatamente.");
+ // Remove hidden classes immediately
+ // // promoModal.classList.remove('opacity-0', 'invisible');
+ // // promoContent.classList.remove('scale-110', 'opacity-0');
+ // // promoContent.classList.add('scale-100', 'opacity-100');
+ // document.body.classList.add('overflow-hidden');
+
+ function closePromo() {
+ console.log("Promo Pop-up: Cerrando modal.");
+ promoModal.classList.add('opacity-0', 'invisible');
+ promoContent.classList.remove('scale-100', 'opacity-100');
+ promoContent.classList.add('scale-110', 'opacity-0');
+ document.body.classList.remove('overflow-hidden');
+ // For now, we still allow seeing it on refresh for verification
+ // localStorage.setItem('women_month_promo_dismissed', new Date().getTime().toString());
+ }
+
+ closePromoBtn.addEventListener('click', closePromo);
+ promoModal.addEventListener('click', (e) => {
+ if (e.target === promoModal) closePromo();
+ });
+ }
+
+ // Asegurarnos de que el DOM esté listo
+ if (document.readyState === 'loading') {
+ document.addEventListener('DOMContentLoaded', initPromoPopup);
+ } else {
+ initPromoPopup();
+ }
+ </script>
+ <script defer src="/_vercel/insights/script.js"></script>
 </body>
 
 </html>
